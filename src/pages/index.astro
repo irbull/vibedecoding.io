@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="VibeDecoding - AI Base Software Development">
+<Layout title="vibedecoding.io - AI Base Software Development">
 	<header class="header">
 		<nav class="nav">
-			<a href="/" class="logo">VibeDecoding</a>
+			<a href="/" class="logo"><span class="prompt">❯</span> vibedecoding.io</a>
 			<div class="nav-links">
-				<a href="#pillars">The 5 Pillars</a>
-				<a href="#path">Learning Path</a>
-				<a href="#why">Why It Matters</a>
+				<a href="#pillars">[PILLARS]</a>
+				<a href="#path">[PATH]</a>
+				<a href="#why">[WHY]</a>
 			</div>
 		</nav>
 	</header>
@@ -17,49 +17,55 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<section class="hero">
 			<div class="hero-content">
-				<h1>The Pragmatic Engineer's Guide to <span class="gradient-text">AI Base Development</span></h1>
-				<p class="hero-subtitle">Not just prompts. Not just chat. This is how you actually build with AI — from running models locally to deploying AI-native applications.</p>
+				<div class="hero-badge">// THE PRAGMATIC ENGINEER'S GUIDE</div>
+				<h1>The <span class="gradient-text">AI Base Development</span> Field Guide</h1>
+				<p class="hero-subtitle">Not prompts. Not chat. Here's how you actually build with AI — from running models locally to deploying AI-native applications.</p>
 				<div class="hero-cta">
-					<a href="#pillars" class="btn btn-primary">Explore the Pillars</a>
-					<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-secondary">Start with Fundamentals</a>
+					<a href="#pillars" class="btn btn-primary">$ EXPLORE</a>
+					<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-secondary">./START_FUNDAMENTALS</a>
 				</div>
 			</div>
 			<div class="hero-visual">
-				<div class="floating-card card-1">
-					<span class="icon">🔧</span>
-					<span>Run Models Locally</span>
-				</div>
-				<div class="floating-card card-2">
-					<span class="icon">⚙️</span>
-					<span>Fine Tune</span>
-				</div>
-				<div class="floating-card card-3">
-					<span class="icon">🤖</span>
-					<span>Build Agents</span>
+				<div class="terminal">
+					<div class="terminal-header">
+						<span class="terminal-dots">● ● ●</span>
+						<span class="terminal-title">~/ai-base-dev</span>
+					</div>
+					<div class="terminal-body">
+						<div class="terminal-line"><span class="prompt">❯</span> llms-the-hard-way/</div>
+						<div class="terminal-line"><span class="prompt">❯</span> fine-tuning/</div>
+						<div class="terminal-line"><span class="prompt">❯</span> inference-harness/</div>
+						<div class="terminal-line"><span class="prompt">❯</span> crucible/</div>
+						<div class="terminal-line"><span class="prompt">❯</span> dev-tools/</div>
+						<div class="terminal-cursor">█</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="pillars" class="section pillars">
 			<div class="container">
-				<h2>The 5 Pillars</h2>
+				<div class="section-header">
+					<span class="section-label">> SECTION_01</span>
+					<h2>THE 5 PILLARS</h2>
+				</div>
 				<p class="section-intro">Five areas of hands-on experience that give you real depth in AI development.</p>
 				
 				<div class="pillars-grid">
 					<div class="pillar-card">
 						<div class="pillar-header">
-							<span class="pillar-number">01</span>
+							<span class="pillar-number">[01]</span>
 							<h3>LLMs the Hard Way</h3>
 						</div>
 						<p>Build your understanding from first principles. No black boxes — learn how transformers actually work by building them.</p>
 						<div class="pillar-links">
-							<a href="https://github.com/irbull/ai-the-hard-way">View Tutorial →</a>
+							<a href="https://github.com/irbull/ai-the-hard-way">→ VIEW TUTORIAL</a>
 						</div>
 					</div>
 
 					<div class="pillar-card">
 						<div class="pillar-header">
-							<span class="pillar-number">02</span>
+							<span class="pillar-number">[02]</span>
 							<h3>Model Fine Tuning</h3>
 						</div>
 						<p>Take base models and specialize them for your use case. Used axolotl to fine tune models for specific tasks.</p>
@@ -72,36 +78,36 @@ import Layout from '../layouts/Layout.astro';
 
 					<div class="pillar-card">
 						<div class="pillar-header">
-							<span class="pillar-number">03</span>
+							<span class="pillar-number">[03]</span>
 							<h3>Inference Harness</h3>
 						</div>
 						<p>Run models locally with llama.cpp. Build your own inference layer on top for custom applications.</p>
 						<div class="pillar-links">
-							<a href="https://ianbull.com/posts/llamas-and-dinosaurs">Read Post →</a>
+							<a href="https://ianbull.com/posts/llamas-and-dinosaurs">→ READ POST</a>
 						</div>
 					</div>
 
 					<div class="pillar-card">
 						<div class="pillar-header">
-							<span class="pillar-number">04</span>
+							<span class="pillar-number">[04]</span>
 							<h3>Custom Agents</h3>
 						</div>
 						<p>Built Crucible — a Firecracker-based agent framework. Understand why context engineering matters at scale.</p>
 						<div class="pillar-links">
-							<a href="https://github.com/irbull/crucible">Explore Crucible →</a>
+							<a href="https://github.com/irbull/crucible">→ EXPLORE CRUCIBLE</a>
 						</div>
 					</div>
 
 					<div class="pillar-card">
 						<div class="pillar-header">
-							<span class="pillar-number">05</span>
+							<span class="pillar-number">[05]</span>
 							<h3>Developer Tools</h3>
 						</div>
-						<p>Built and deployed internal AI tools — Risk Analysis and Code Review. These are AI-native apps, not slash commands in chat.</p>
+						<p>Built and deployed internal AI tools — Risk Analysis and Code Review. These are AI-native apps, not slash commands.</p>
 						<div class="pillar-tags">
-							<span class="tag">Code Review</span>
-							<span class="tag">Risk Analysis</span>
-							<span class="tag">AI-Native</span>
+							<span class="tag">CODE REVIEW</span>
+							<span class="tag">RISK ANALYSIS</span>
+							<span class="tag">AI-NATIVE</span>
 						</div>
 					</div>
 				</div>
@@ -110,13 +116,16 @@ import Layout from '../layouts/Layout.astro';
 
 		<section id="path" class="section path">
 			<div class="container">
-				<h2>The Learning Path</h2>
+				<div class="section-header">
+					<span class="section-label">> SECTION_02</span>
+					<h2>THE LEARNING PATH</h2>
+				</div>
 				<p class="section-intro">A pragmatic journey from fundamentals to shipping real products.</p>
 				
 				<div class="path-flow">
 					<div class="path-step">
 						<div class="step-icon">📚</div>
-						<h3>1. Learn Fundamentals</h3>
+						<h3>01 // LEARN</h3>
 						<p>Start with LLMs the Hard Way. Understand transformers, tokenization, attention. Build the mental model.</p>
 						<div class="step-resources">
 							<span class="resource-link">→ ai-the-hard-way</span>
@@ -127,7 +136,7 @@ import Layout from '../layouts/Layout.astro';
 
 					<div class="path-step">
 						<div class="step-icon">🔧</div>
-						<h3>2. Tame the Model</h3>
+						<h3>02 // TAME</h3>
 						<p>Run models locally. Fine tune for your use case. Learn inference at the metal level.</p>
 						<div class="step-resources">
 							<span class="resource-link">→ llama.cpp, axolotl</span>
@@ -138,7 +147,7 @@ import Layout from '../layouts/Layout.astro';
 
 					<div class="path-step">
 						<div class="step-icon">🤖</div>
-						<h3>3. Build Agents</h3>
+						<h3>03 // BUILD</h3>
 						<p>Move beyond simple prompts. Build agents that can reason, plan, and execute. Context is everything.</p>
 						<div class="step-resources">
 							<span class="resource-link">→ Crucible</span>
@@ -149,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
 
 					<div class="path-step">
 						<div class="step-icon">🚀</div>
-						<h3>4. Ship Products</h3>
+						<h3>04 // SHIP</h3>
 						<p>Build AI-native applications. Eat your own dog food. Create tools your team actually uses.</p>
 						<div class="step-resources">
 							<span class="resource-link">→ Risk Analysis, Code Review</span>
@@ -161,26 +170,29 @@ import Layout from '../layouts/Layout.astro';
 
 		<section id="why" class="section why-it-matters">
 			<div class="container">
-				<h2>Why This Matters</h2>
+				<div class="section-header">
+					<span class="section-label">> SECTION_03</span>
+					<h2>WHY THIS MATTERS</h2>
+				</div>
 				<div class="why-grid">
 					<div class="why-item">
 						<span class="why-stat">↓</span>
-						<h4>No More Black Boxes</h4>
+						<h4>NO MORE BLACK BOXES</h4>
 						<p>Understand what's happening under the hood. Debug when things break.</p>
 					</div>
 					<div class="why-item">
 						<span class="why-stat">↑</span>
-						<h4>Better Outputs</h4>
+						<h4>BETTER OUTPUTS</h4>
 						<p>Fine tuning and context engineering produce far better results than better prompts.</p>
 					</div>
 					<div class="why-item">
 						<span class="why-stat">🔒</span>
-						<h4>Data Stays Local</h4>
+						<h4>DATA STAYS LOCAL</h4>
 						<p>Run models on your own infrastructure. No data leaves your environment.</p>
 					</div>
 					<div class="why-item">
 						<span class="why-stat">⚡</span>
-						<h4>Faster & Cheaper</h4>
+						<h4>FASTER & CHEAPER</h4>
 						<p>Small fine-tuned models outperform large APIs at a fraction of the cost.</p>
 					</div>
 				</div>
@@ -190,11 +202,12 @@ import Layout from '../layouts/Layout.astro';
 		<section class="section cta">
 			<div class="container">
 				<div class="cta-box">
-					<h2>Start Building</h2>
+					<div class="cta-header">> READY_TO_BUILD?</div>
+					<h2>START BUILDING</h2>
 					<p>Head to the fundamentals tutorial to begin. Or explore the repos to see how these pieces fit together.</p>
 					<div class="cta-buttons">
-						<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-primary">LLMs the Hard Way</a>
-						<a href="https://github.com/irbull/crucible" class="btn btn-secondary">Crucible</a>
+						<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-primary">$ LLMS_THE_HARD_WAY</a>
+						<a href="https://github.com/irbull/crucible" class="btn btn-secondary">$ CRUCIBLE</a>
 					</div>
 				</div>
 			</div>
@@ -203,22 +216,29 @@ import Layout from '../layouts/Layout.astro';
 
 	<footer class="footer">
 		<div class="container">
-			<p>&copy; 2026 VibeDecoding. Built by a pragmatist, for pragmatists.</p>
+			<pre class="ascii-art">
+┌─────────────────────────────────────────────┐
+│  (c) 2026 VibeDecoding                     │
+│  Built by a pragmatist, for pragmatists    │
+└─────────────────────────────────────────────┘
+			</pre>
 		</div>
 	</footer>
 </Layout>
 
 <style>
 	:root {
-		--color-bg: #FFFBF8;
-		--color-surface: #FFFFFF;
-		--color-text: #2D2A26;
-		--color-text-muted: #6B6560;
-		--color-primary: #E85D4C;
-		--color-primary-dark: #D14A3B;
-		--color-secondary: #4ECDC4;
-		--color-accent: #FFD166;
-		--color-border: #F0E8E4;
+		--color-bg: #fafafa;
+		--color-surface: #ffffff;
+		--color-text: #1a1a1a;
+		--color-text-dim: #666666;
+		--color-text-muted: #888888;
+		--color-primary: #6366f1;
+		--color-primary-hover: #818cf8;
+		--color-secondary: #0891b2;
+		--color-accent: #f59e0b;
+		--color-border: #e5e5e5;
+		--color-terminal-bg: #1a1a1a;
 	}
 
 	.header {
@@ -226,7 +246,7 @@ import Layout from '../layouts/Layout.astro';
 		top: 0;
 		left: 0;
 		right: 0;
-		background: rgba(255, 251, 248, 0.9);
+		background: rgba(250, 250, 250, 0.9);
 		backdrop-filter: blur(10px);
 		z-index: 100;
 		border-bottom: 1px solid var(--color-border);
@@ -242,21 +262,27 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.logo {
-		font-size: 1.5rem;
-		font-weight: 700;
+		font-size: 1.25rem;
+		font-weight: 600;
 		color: var(--color-text);
 		text-decoration: none;
 	}
 
+	.prompt {
+		color: var(--color-primary);
+		margin-right: 0.5rem;
+	}
+
 	.nav-links {
 		display: flex;
-		gap: 2rem;
+		gap: 1.5rem;
 	}
 
 	.nav-links a {
 		color: var(--color-text-muted);
 		text-decoration: none;
 		font-weight: 500;
+		font-size: 0.9rem;
 		transition: color 0.2s;
 	}
 
@@ -275,11 +301,22 @@ import Layout from '../layouts/Layout.astro';
 		min-height: 80vh;
 	}
 
+	.hero-badge {
+		display: inline-block;
+		background: var(--color-border);
+		color: var(--color-text-dim);
+		padding: 0.25rem 0.75rem;
+		font-size: 0.75rem;
+		margin-bottom: 1rem;
+		border-radius: 2px;
+	}
+
 	.hero h1 {
-		font-size: 3rem;
+		font-size: 2.75rem;
 		line-height: 1.1;
 		margin: 0 0 1.5rem;
 		color: var(--color-text);
+		font-weight: 600;
 	}
 
 	.gradient-text {
@@ -290,7 +327,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.hero-subtitle {
-		font-size: 1.25rem;
+		font-size: 1.1rem;
 		color: var(--color-text-muted);
 		line-height: 1.6;
 		margin-bottom: 2rem;
@@ -303,10 +340,11 @@ import Layout from '../layouts/Layout.astro';
 
 	.btn {
 		display: inline-block;
-		padding: 0.875rem 1.75rem;
-		border-radius: 50px;
+		padding: 0.75rem 1.5rem;
+		border-radius: 2px;
 		font-weight: 600;
 		text-decoration: none;
+		font-size: 0.9rem;
 		transition: all 0.2s;
 	}
 
@@ -316,14 +354,13 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.btn-primary:hover {
-		background: var(--color-primary-dark);
-		transform: translateY(-2px);
+		background: var(--color-primary-hover);
 	}
 
 	.btn-secondary {
-		background: var(--color-surface);
+		background: transparent;
 		color: var(--color-text);
-		border: 2px solid var(--color-border);
+		border: 1px solid var(--color-border);
 	}
 
 	.btn-secondary:hover {
@@ -333,51 +370,64 @@ import Layout from '../layouts/Layout.astro';
 
 	.hero-visual {
 		position: relative;
-		height: 400px;
 	}
 
-	.floating-card {
-		position: absolute;
+	.terminal {
+		background: var(--color-terminal-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		overflow: hidden;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+	}
+
+	.terminal-header {
 		background: var(--color-surface);
-		padding: 1rem 1.5rem;
-		border-radius: 12px;
-		box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+		padding: 0.5rem 1rem;
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
-		font-weight: 500;
-		animation: float 3s ease-in-out infinite;
+		gap: 1rem;
+		border-bottom: 1px solid var(--color-border);
 	}
 
-	.floating-card .icon {
-		font-size: 1.5rem;
+	.terminal-dots {
+		display: flex;
+		gap: 0.25rem;
+		font-size: 0.5rem;
 	}
 
-	.card-1 {
-		top: 20%;
-		left: 10%;
-		animation-delay: 0s;
+	.terminal-dots::before {
+		content: "● ● ●";
+		color: var(--color-text-muted);
 	}
 
-	.card-2 {
-		top: 45%;
-		right: 5%;
-		animation-delay: 0.5s;
+	.terminal-title {
+		font-size: 0.75rem;
+		color: var(--color-text-muted);
 	}
 
-	.card-3 {
-		bottom: 15%;
-		left: 25%;
-		animation-delay: 1s;
+	.terminal-body {
+		padding: 1rem;
+		font-size: 0.8rem;
 	}
 
-	@keyframes float {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(-10px); }
+	.terminal-line {
+		margin: 0.25rem 0;
+		color: var(--color-text-muted);
+	}
+
+	.terminal-cursor {
+		color: var(--color-primary);
+		animation: blink 1s step-end infinite;
+	}
+
+	@keyframes blink {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0; }
 	}
 
 	.section {
-		padding: 5rem 2rem;
+		padding: 4rem 2rem;
+		border-top: 1px dashed var(--color-border);
 	}
 
 	.container {
@@ -385,16 +435,29 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0 auto;
 	}
 
-	.section h2 {
-		font-size: 2.5rem;
+	.section-header {
 		text-align: center;
-		margin: 0 0 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.section-label {
+		display: block;
+		color: var(--color-secondary);
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.section h2 {
+		font-size: 2rem;
+		text-align: center;
+		margin: 0;
 		color: var(--color-text);
+		letter-spacing: 0.1em;
 	}
 
 	.section-intro {
 		text-align: center;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		color: var(--color-text-muted);
 		max-width: 700px;
 		margin: 0 auto 3rem;
@@ -407,13 +470,13 @@ import Layout from '../layouts/Layout.astro';
 	.pillars-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
+		gap: 1rem;
 	}
 
 	.pillar-card {
 		background: var(--color-bg);
-		padding: 1.75rem;
-		border-radius: 16px;
+		padding: 1.5rem;
+		border-radius: 4px;
 		border: 1px solid var(--color-border);
 	}
 
@@ -427,22 +490,20 @@ import Layout from '../layouts/Layout.astro';
 	.pillar-number {
 		font-size: 0.75rem;
 		font-weight: 700;
-		color: var(--color-primary);
-		background: rgba(232, 93, 76, 0.1);
-		padding: 0.25rem 0.5rem;
-		border-radius: 4px;
+		color: var(--color-secondary);
 	}
 
 	.pillar-header h3 {
 		margin: 0;
-		font-size: 1.25rem;
+		font-size: 1.1rem;
 		color: var(--color-text);
 	}
 
 	.pillar-card p {
 		margin: 0 0 1rem;
 		color: var(--color-text-muted);
-		line-height: 1.6;
+		line-height: 1.5;
+		font-size: 0.9rem;
 	}
 
 	.pillar-tags {
@@ -452,15 +513,15 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.tag {
-		font-size: 0.75rem;
-		padding: 0.25rem 0.5rem;
+		font-size: 0.65rem;
+		padding: 0.2rem 0.4rem;
 		background: var(--color-border);
-		border-radius: 4px;
-		color: var(--color-text-muted);
+		border-radius: 2px;
+		color: var(--color-text-dim);
 	}
 
 	.pillar-links a {
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		color: var(--color-primary);
 		text-decoration: none;
 		font-weight: 500;
@@ -482,31 +543,32 @@ import Layout from '../layouts/Layout.astro';
 		text-align: center;
 		padding: 1.5rem;
 		background: var(--color-surface);
-		border-radius: 12px;
+		border-radius: 4px;
 		border: 1px solid var(--color-border);
 	}
 
 	.step-icon {
-		font-size: 2rem;
-		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.path-step h3 {
 		margin: 0 0 0.75rem;
-		font-size: 1.1rem;
+		font-size: 0.9rem;
 		color: var(--color-text);
+		letter-spacing: 0.05em;
 	}
 
 	.path-step p {
 		margin: 0 0 1rem;
 		color: var(--color-text-muted);
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		line-height: 1.5;
 	}
 
 	.step-resources {
-		font-size: 0.8rem;
-		color: var(--color-primary);
+		font-size: 0.75rem;
+		color: var(--color-secondary);
 		font-weight: 500;
 	}
 
@@ -523,38 +585,51 @@ import Layout from '../layouts/Layout.astro';
 	.why-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
+		gap: 1.5rem;
 	}
 
 	.why-item {
 		text-align: center;
+		padding: 1.5rem;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		background: var(--color-bg);
 	}
 
 	.why-stat {
 		display: block;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-weight: 700;
 		color: var(--color-primary);
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.why-item h4 {
 		margin: 0 0 0.5rem;
 		color: var(--color-text);
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
 	}
 
 	.why-item p {
 		margin: 0;
 		color: var(--color-text-muted);
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 
 	.cta {
-		background: linear-gradient(135deg, var(--color-primary) 0%, #F4A261 100%);
+		background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+	}
+
+	.cta-header {
+		text-align: center;
+		color: var(--color-secondary);
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.cta h2 {
-		color: white;
+		color: var(--color-text);
 	}
 
 	.cta-box {
@@ -562,8 +637,8 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.cta-box p {
-		color: rgba(255,255,255,0.9);
-		font-size: 1.25rem;
+		color: var(--color-text-muted);
+		font-size: 1rem;
 		margin-bottom: 2rem;
 	}
 
@@ -575,28 +650,30 @@ import Layout from '../layouts/Layout.astro';
 
 	.cta .btn-primary {
 		background: var(--color-text);
-		color: white;
+		color: var(--color-bg);
 	}
 
 	.cta .btn-secondary {
-		background: transparent;
-		border: 2px solid white;
-		color: white;
-	}
-
-	.cta .btn-secondary:hover {
-		background: white;
-		color: var(--color-text);
+		border: 1px solid var(--color-primary);
+		color: var(--color-primary);
 	}
 
 	.footer {
-		background: var(--color-text);
-		color: rgba(255,255,255,0.7);
+		background: var(--color-bg);
+		color: var(--color-text-muted);
 		padding: 2rem;
 		text-align: center;
+		border-top: 1px dashed var(--color-border);
 	}
 
 	.footer p {
+		margin: 0;
+	}
+
+	.ascii-art {
+		font-size: 0.7rem;
+		line-height: 1.2;
+		color: var(--color-text-dim);
 		margin: 0;
 	}
 
@@ -618,7 +695,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.hero h1 {
-			font-size: 2.25rem;
+			font-size: 2rem;
 		}
 
 		.hero-cta {
