@@ -598,56 +598,6 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		<!-- ROADMAP -->
-		<section class="section roadmap">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-label">> SECTION_09</span>
-					<h2>THE PATH FORWARD</h2>
-				</div>
-
-				<div class="roadmap-flow">
-					<div class="roadmap-step active">
-						<div class="roadmap-phase">PHASE 1</div>
-						<h3>CLI + Skills</h3>
-						<ul>
-							<li>vibe init, write, skill, query, skill create</li>
-							<li>Git-backed wiki with layered structure</li>
-							<li>Context inference from .vibe/config.yaml</li>
-							<li>Declared skills (org layer)</li>
-							<li>Daily curation + skill maintenance</li>
-						</ul>
-					</div>
-
-					<div class="roadmap-connector"></div>
-
-					<div class="roadmap-step">
-						<div class="roadmap-phase">PHASE 2</div>
-						<h3>Webhooks + Full Layering</h3>
-						<ul>
-							<li>GitHub release webhook</li>
-							<li>Release summarizer agent</li>
-							<li>Project-layer skill support</li>
-							<li>Skill discovery agent</li>
-						</ul>
-					</div>
-
-					<div class="roadmap-connector"></div>
-
-					<div class="roadmap-step">
-						<div class="roadmap-phase">PHASE 3</div>
-						<h3>Portal + User Layer</h3>
-						<ul>
-							<li>Web UI for browsing/editing</li>
-							<li>User-layer skills (personal, no PR review)</li>
-							<li>Team management + billing</li>
-							<li>Skill suggestion UI</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- CTA -->
 		<section class="section cta">
 			<div class="container">
@@ -1548,68 +1498,6 @@ import Layout from '../layouts/Layout.astro';
 		background: var(--color-primary-hover);
 	}
 
-	/* ── ROADMAP ── */
-	.roadmap { background: var(--color-bg); }
-
-	.roadmap-flow {
-		display: flex;
-		align-items: stretch;
-		gap: 0;
-	}
-
-	.roadmap-step {
-		flex: 1;
-		background: var(--color-surface);
-		border: 1px solid var(--color-border);
-		border-radius: 4px;
-		padding: 2rem;
-	}
-
-	.roadmap-step.active { border-color: var(--color-primary); }
-
-	.roadmap-phase {
-		font-size: 0.7rem;
-		font-weight: 700;
-		color: var(--color-secondary);
-		letter-spacing: 0.1em;
-		margin-bottom: 0.5rem;
-	}
-
-	.roadmap-step.active .roadmap-phase { color: var(--color-primary); }
-
-	.roadmap-step h3 {
-		margin: 0 0 1rem;
-		font-size: 1rem;
-		color: var(--color-text);
-	}
-
-	.roadmap-step ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.roadmap-step li {
-		padding: 0.3rem 0;
-		font-size: 0.8rem;
-		color: var(--color-text-muted);
-	}
-
-	.roadmap-step li::before {
-		content: "→ ";
-		color: var(--color-primary);
-	}
-
-	.roadmap-connector {
-		width: 2rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--color-border);
-		font-size: 1.5rem;
-	}
-
-	.roadmap-connector::before { content: "→"; }
 
 	/* ── CTA ── */
 	.cta { background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); }
@@ -1664,8 +1552,6 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	@media (max-width: 900px) {
-		.roadmap-flow { flex-direction: column; }
-		.roadmap-connector { width: auto; height: 1.5rem; transform: rotate(90deg); }
 		.architecture { flex-direction: column; }
 		.layer-connector {
 			flex-direction: row;
