@@ -338,7 +338,7 @@ import Layout from '../layouts/Layout.astro';
 					<span class="section-label">> SECTION_06</span>
 					<h2>AGENTS</h2>
 				</div>
-				<p class="section-intro">Agents are the primary growth vector. They transform vibedecoding from a passive wiki into a <strong>living organizational nervous system</strong>.</p>
+				<p class="section-intro">There are three types of agents. Each has a distinct job.</p>
 
 				<div class="agent-model">
 					<div class="agent-model-side">
@@ -411,17 +411,41 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 
 				<div class="agent-types">
-					<h3>Two Types of Agent Runs</h3>
-					<div class="agent-types-grid">
+					<div class="agent-types-grid three-col">
 						<div class="agent-type-card">
-							<div class="agent-type-label">CURATION</div>
-							<p>Keeping the wiki itself clean. Detects duplicate facts, flags contradictions, proposes merges. Runs on a daily or weekly schedule.</p>
+							<div class="agent-type-label">GROW</div>
+							<h4>Event Agents</h4>
+							<p>Write new knowledge to the wiki. Triggered by things that happen in your workflow — a release ships, a milestone closes, a PR gets merged. Each agent watches for a specific event and writes a structured summary into the right place.</p>
+							<div class="agent-trigger">Trigger: event fires</div>
+							<ul class="agent-examples">
+								<li>Release Summarizer</li>
+								<li>Milestone Summarizer</li>
+								<li>Pattern Extractor</li>
+							</ul>
 						</div>
 						<div class="agent-type-card">
-							<div class="agent-type-label">SKILL MAINTENANCE</div>
-							<p>Keeping skills relevant and current across all layers. Routes new facts to the right skills. Discovers new skill candidates from emerging clusters.</p>
+							<div class="agent-type-label">CLEAN</div>
+							<h4>The Curator</h4>
+							<p>Keeps the wiki itself healthy. Runs on a schedule — not per write. Detects duplicate facts, flags contradictions between entries, and proposes merges. It never deletes anything unilaterally. It proposes, and a human approves.</p>
+							<div class="agent-trigger">Trigger: daily / weekly cron</div>
+							<ul class="agent-examples">
+								<li>Dedup facts</li>
+								<li>Flag contradictions</li>
+								<li>Propose merges</li>
+							</ul>
+						</div>
+						<div class="agent-type-card">
+							<div class="agent-type-label">USEFUL</div>
+							<h4>Skill Agents</h4>
+							<p>Keep the query layer current. The Skill Maintainer watches for new wiki entries and routes them into the right skills automatically. The Skill Discoverer runs weekly and surfaces suggestions when patterns emerge.</p>
+							<div class="agent-trigger">Trigger: on write + weekly cron</div>
+							<ul class="agent-examples">
+								<li>Skill Maintainer</li>
+								<li>Skill Discoverer</li>
+							</ul>
 						</div>
 					</div>
+					<p class="agent-types-summary">Event agents grow the wiki. The curator keeps it clean. Skill agents keep it useful. Three jobs, intentionally separate.</p>
 				</div>
 
 				<div class="agent-config">
@@ -1298,17 +1322,14 @@ import Layout from '../layouts/Layout.astro';
 	/* ── AGENT TYPES ── */
 	.agent-types { margin-bottom: 3rem; }
 
-	.agent-types h3 {
-		margin: 0 0 1.5rem;
-		font-size: 1.1rem;
-		color: var(--color-text);
-		text-align: center;
-	}
-
 	.agent-types-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1.5rem;
+	}
+
+	.agent-types-grid.three-col {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.agent-type-card {
@@ -1323,14 +1344,56 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 700;
 		color: var(--color-secondary);
 		letter-spacing: 0.1em;
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.agent-type-card h4 {
+		margin: 0 0 0.75rem;
+		font-size: 1rem;
+		color: var(--color-text);
 	}
 
 	.agent-type-card p {
-		margin: 0;
+		margin: 0 0 1rem;
 		font-size: 0.85rem;
 		color: var(--color-text-muted);
 		line-height: 1.5;
+	}
+
+	.agent-trigger {
+		display: inline-block;
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		background: rgba(99, 102, 241, 0.08);
+		padding: 0.2rem 0.6rem;
+		border-radius: 2px;
+		margin-bottom: 0.75rem;
+	}
+
+	.agent-examples {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.agent-examples li {
+		padding: 0.25rem 0;
+		font-size: 0.8rem;
+		color: var(--color-text-muted);
+	}
+
+	.agent-examples li::before {
+		content: "→ ";
+		color: var(--color-primary);
+	}
+
+	.agent-types-summary {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--color-text-dim);
+		margin: 2rem 0 0;
+		font-style: italic;
 	}
 
 	/* ── DIFFERENTIATORS ── */
@@ -1597,6 +1660,7 @@ import Layout from '../layouts/Layout.astro';
 		.pricing-grid { grid-template-columns: repeat(2, 1fr); }
 		.flow-item { flex-wrap: wrap; }
 		.flow-source, .flow-agent { min-width: auto; }
+		.agent-types-grid.three-col { grid-template-columns: 1fr; }
 	}
 
 	@media (max-width: 900px) {
@@ -1611,7 +1675,7 @@ import Layout from '../layouts/Layout.astro';
 		.connector-line { width: 2rem; height: 1px; }
 		.git-backed { grid-template-columns: 1fr; }
 		.profiles-grid { grid-template-columns: 1fr; }
-		.agent-types-grid { grid-template-columns: 1fr; }
+		.agent-types-grid, .agent-types-grid.three-col { grid-template-columns: 1fr; }
 	}
 
 	@media (max-width: 768px) {
