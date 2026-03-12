@@ -2,212 +2,638 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="vibedecoding.io - AI Base Software Development">
+<Layout title="vibedecoding.io — A Wiki for Your Coding Agents">
 	<header class="header">
 		<nav class="nav">
 			<a href="/" class="logo"><span class="prompt">❯</span> vibedecoding.io</a>
 			<div class="nav-links">
-				<a href="#pillars">[PILLARS]</a>
-				<a href="#path">[PATH]</a>
-				<a href="#why">[WHY]</a>
+				<a href="#problem">[PROBLEM]</a>
+				<a href="#solution">[SOLUTION]</a>
+				<a href="#cli">[CLI]</a>
+				<a href="#skills">[SKILLS]</a>
+				<a href="#agents">[AGENTS]</a>
+				<a href="#pricing">[PRICING]</a>
 			</div>
 		</nav>
 	</header>
 
 	<main>
+		<!-- HERO -->
 		<section class="hero">
 			<div class="hero-content">
-				<div class="hero-badge">// THE PRAGMATIC ENGINEER'S GUIDE</div>
-				<h1>The <span class="gradient-text">AI Base Development</span> Field Guide</h1>
-				<p class="hero-subtitle">Not prompts. Not chat. Here's how you actually build with AI — from running models locally to deploying AI-native applications.</p>
+				<div class="hero-badge">// PERSISTENT MEMORY FOR CODING AGENTS</div>
+				<h1>A <span class="gradient-text">Wiki</span> for Your Coding Agents</h1>
+				<p class="hero-subtitle">CLAUDE.md for your whole org, with a human-readable audit trail and agent tooling on top. Stop losing institutional knowledge between sessions.</p>
 				<div class="hero-cta">
-					<a href="#pillars" class="btn btn-primary">$ EXPLORE</a>
-					<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-secondary">./START_FUNDAMENTALS</a>
+					<a href="#pricing" class="btn btn-primary">$ GET_STARTED</a>
+					<a href="#solution" class="btn btn-secondary">./LEARN_MORE</a>
 				</div>
 			</div>
 			<div class="hero-visual">
 				<div class="terminal">
 					<div class="terminal-header">
-						<span class="terminal-dots">● ● ●</span>
-						<span class="terminal-title">~/ai-base-dev</span>
+						<span class="terminal-dots"></span>
+						<span class="terminal-title">~/my-project</span>
 					</div>
 					<div class="terminal-body">
-						<div class="terminal-line"><span class="prompt">❯</span> llms-the-hard-way/</div>
-						<div class="terminal-line"><span class="prompt">❯</span> fine-tuning/</div>
-						<div class="terminal-line"><span class="prompt">❯</span> inference-harness/</div>
-						<div class="terminal-line"><span class="prompt">❯</span> crucible/</div>
-						<div class="terminal-line"><span class="prompt">❯</span> dev-tools/</div>
+						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review --project voice-tools</div>
+						<div class="terminal-line output">  → Always use lib/logger.ts for structured logging</div>
+						<div class="terminal-line output">  → voice-tools uses WebSocket streams — check cleanup</div>
+						<div class="terminal-line output">  → Error responses must include request_id</div>
+						<div class="terminal-line"></div>
+						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use lib/logger.ts for all logging" \</div>
+						<div class="terminal-line output">    --project voice-tools --tag logging</div>
+						<div class="terminal-line output">  ✓ Written to org/conventions/logging.md</div>
+						<div class="terminal-line output">  ✓ Skill code-review updated automatically</div>
 						<div class="terminal-cursor">█</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="pillars" class="section pillars">
+		<!-- THE PROBLEM -->
+		<section id="problem" class="section problem">
 			<div class="container">
 				<div class="section-header">
 					<span class="section-label">> SECTION_01</span>
-					<h2>THE 5 PILLARS</h2>
+					<h2>THE PROBLEM</h2>
 				</div>
-				<p class="section-intro">Five areas of hands-on experience that give you real depth in AI development.</p>
-				
-				<div class="pillars-grid">
-					<div class="pillar-card">
-						<div class="pillar-header">
-							<span class="pillar-number">[01]</span>
-							<h3>LLMs the Hard Way</h3>
-						</div>
-						<p>Build your understanding from first principles. No black boxes — learn how transformers actually work by building them.</p>
-						<div class="pillar-links">
-							<a href="https://github.com/irbull/ai-the-hard-way">→ VIEW TUTORIAL</a>
-						</div>
-					</div>
+				<p class="section-intro">Coding agents are stateless. Every session starts fresh. When an agent discovers that your team has a shared logging library, fixes the issue, and moves on — <strong>that knowledge dies.</strong></p>
 
-					<div class="pillar-card">
-						<div class="pillar-header">
-							<span class="pillar-number">[02]</span>
-							<h3>Model Fine Tuning</h3>
-						</div>
-						<p>Take base models and specialize them for your use case. Used axolotl to fine tune models for specific tasks.</p>
-						<div class="pillar-tags">
-							<span class="tag">axolotl</span>
-							<span class="tag">LoRA</span>
-							<span class="tag">QLoRA</span>
-						</div>
+				<div class="problem-grid">
+					<div class="problem-card">
+						<span class="problem-icon">📄</span>
+						<h3>CLAUDE.md / agent.md</h3>
+						<p>Single-project scope. No cross-project knowledge. Manually maintained by humans.</p>
+						<span class="problem-verdict">LIMITED SCOPE</span>
 					</div>
-
-					<div class="pillar-card">
-						<div class="pillar-header">
-							<span class="pillar-number">[03]</span>
-							<h3>Inference Harness</h3>
-						</div>
-						<p>Run models locally with llama.cpp. Build your own inference layer on top for custom applications.</p>
-						<div class="pillar-links">
-							<a href="https://ianbull.com/posts/llamas-and-dinosaurs">→ READ POST</a>
-						</div>
+					<div class="problem-card">
+						<span class="problem-icon">📚</span>
+						<h3>Confluence / Notion</h3>
+						<p>Built for humans, not queryable by agents. Knowledge exists but agents can't reach it.</p>
+						<span class="problem-verdict">WRONG AUDIENCE</span>
 					</div>
-
-					<div class="pillar-card">
-						<div class="pillar-header">
-							<span class="pillar-number">[04]</span>
-							<h3>Custom Agents</h3>
-						</div>
-						<p>Built Crucible — a Firecracker-based agent framework. Understand why context engineering matters at scale.</p>
-						<div class="pillar-links">
-							<a href="https://github.com/irbull/crucible">→ EXPLORE CRUCIBLE</a>
-						</div>
-					</div>
-
-					<div class="pillar-card">
-						<div class="pillar-header">
-							<span class="pillar-number">[05]</span>
-							<h3>Developer Tools</h3>
-						</div>
-						<p>Built and deployed internal AI tools — Risk Analysis and Code Review. These are AI-native apps, not slash commands.</p>
-						<div class="pillar-tags">
-							<span class="tag">CODE REVIEW</span>
-							<span class="tag">RISK ANALYSIS</span>
-							<span class="tag">AI-NATIVE</span>
-						</div>
+					<div class="problem-card">
+						<span class="problem-icon">🔍</span>
+						<h3>RAG Over Codebase</h3>
+						<p>Finds what <em>is</em> — not what <em>should be</em>. Can't capture conventions, decisions, or lessons learned.</p>
+						<span class="problem-verdict">WRONG DATA</span>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="path" class="section path">
+		<!-- THE SOLUTION -->
+		<section id="solution" class="section solution">
 			<div class="container">
 				<div class="section-header">
 					<span class="section-label">> SECTION_02</span>
-					<h2>THE LEARNING PATH</h2>
+					<h2>THE SOLUTION</h2>
 				</div>
-				<p class="section-intro">A pragmatic journey from fundamentals to shipping real products.</p>
-				
-				<div class="path-flow">
-					<div class="path-step">
-						<div class="step-icon">📚</div>
-						<h3>01 // LEARN</h3>
-						<p>Start with LLMs the Hard Way. Understand transformers, tokenization, attention. Build the mental model.</p>
-						<div class="step-resources">
-							<span class="resource-link">→ ai-the-hard-way</span>
+				<p class="section-intro">vibedecoding.io is a <strong>persistent organizational memory layer for coding agents</strong> — a wiki that agents can read from and write to, continuously enriched by both humans and automated agents.</p>
+
+				<div class="architecture">
+					<div class="layer">
+						<div class="layer-label">LAYER 1</div>
+						<h3>The Human Layer</h3>
+						<ul>
+							<li>Markdown wiki, navigable via a web portal</li>
+							<li>Humans browse, edit, and review like any wiki</li>
+							<li>Plain markdown is the canonical source of truth</li>
+						</ul>
+					</div>
+					<div class="layer-connector">
+						<div class="connector-line"></div>
+						<span class="connector-label">event sourcing</span>
+						<div class="connector-line"></div>
+					</div>
+					<div class="layer">
+						<div class="layer-label">LAYER 2</div>
+						<h3>The Agent Layer</h3>
+						<ul>
+							<li>Structured, indexed representation optimized for agent queries</li>
+							<li>Rebuilt automatically whenever the wiki changes — on write, on push</li>
+							<li>No manual compile step; index maintenance is invisible to users</li>
+							<li>No magic black box — the source is always auditable</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="git-backed">
+					<div class="terminal terminal-small">
+						<div class="terminal-header">
+							<span class="terminal-dots"></span>
+							<span class="terminal-title">vibedecoding-wiki/</span>
+						</div>
+						<div class="terminal-body">
+							<div class="terminal-line tree"><span class="tree-branch">├─</span> org/</div>
+							<div class="terminal-line tree"><span class="tree-branch">│  ├─</span> conventions/</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│  │  ├─</span> logging.md</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│  │  └─</span> error-handling.md</div>
+							<div class="terminal-line tree"><span class="tree-branch">│  ├─</span> decisions/</div>
+							<div class="terminal-line tree"><span class="tree-branch">│  └─</span> skills/</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│     ├─</span> code-review.md</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│     └─</span> onboarding.md</div>
+							<div class="terminal-line tree"><span class="tree-branch">├─</span> projects/</div>
+							<div class="terminal-line tree"><span class="tree-branch">│  └─</span> voice-tools/</div>
+							<div class="terminal-line tree"><span class="tree-branch">│     └─</span> skills/</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│        └─</span> code-review.md</div>
+							<div class="terminal-line tree"><span class="tree-branch">├─</span> users/</div>
+							<div class="terminal-line tree"><span class="tree-branch">│  └─</span> ian/</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">│     └─</span> skills/</div>
+							<div class="terminal-line tree"><span class="tree-branch">└─</span> .vibe/</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">   ├─</span> config.yaml</div>
+							<div class="terminal-line tree dim"><span class="tree-branch">   └─</span> agents.yaml</div>
 						</div>
 					</div>
-
-					<div class="path-arrow">→</div>
-
-					<div class="path-step">
-						<div class="step-icon">🔧</div>
-						<h3>02 // TAME</h3>
-						<p>Run models locally. Fine tune for your use case. Learn inference at the metal level.</p>
-						<div class="step-resources">
-							<span class="resource-link">→ llama.cpp, axolotl</span>
-						</div>
-					</div>
-
-					<div class="path-arrow">→</div>
-
-					<div class="path-step">
-						<div class="step-icon">🤖</div>
-						<h3>03 // BUILD</h3>
-						<p>Move beyond simple prompts. Build agents that can reason, plan, and execute. Context is everything.</p>
-						<div class="step-resources">
-							<span class="resource-link">→ Crucible</span>
-						</div>
-					</div>
-
-					<div class="path-arrow">→</div>
-
-					<div class="path-step">
-						<div class="step-icon">🚀</div>
-						<h3>04 // SHIP</h3>
-						<p>Build AI-native applications. Eat your own dog food. Create tools your team actually uses.</p>
-						<div class="step-resources">
-							<span class="resource-link">→ Risk Analysis, Code Review</span>
-						</div>
+					<div class="git-info">
+						<h3>Git-Backed Storage</h3>
+						<p>The wiki is a git repository. Full provenance for free — every fact has an author and timestamp. PR-based review flow for agent-proposed changes. Familiar editing workflow for humans.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="why" class="section why-it-matters">
+		<!-- COMPARISON -->
+		<section class="section comparison">
 			<div class="container">
 				<div class="section-header">
 					<span class="section-label">> SECTION_03</span>
-					<h2>WHY THIS MATTERS</h2>
+					<h2>CLAUDE.md vs VIBEDECODING</h2>
 				</div>
-				<div class="why-grid">
-					<div class="why-item">
-						<span class="why-stat">↓</span>
-						<h4>NO MORE BLACK BOXES</h4>
-						<p>Understand what's happening under the hood. Debug when things break.</p>
+				<p class="section-intro">They complement each other. vibedecoding can inject a relevant summary into CLAUDE.md at project init.</p>
+
+				<div class="comparison-table-wrapper">
+					<table class="comparison-table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>CLAUDE.md / agent.md</th>
+								<th class="highlight-col">vibedecoding</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="row-label">Scope</td>
+								<td>Single project</td>
+								<td class="highlight-col">Org, project, and user layers</td>
+							</tr>
+							<tr>
+								<td class="row-label">Author</td>
+								<td>Human, manually</td>
+								<td class="highlight-col">Human + agent-assisted</td>
+							</tr>
+							<tr>
+								<td class="row-label">Location</td>
+								<td>In the repo</td>
+								<td class="highlight-col">External, centralized</td>
+							</tr>
+							<tr>
+								<td class="row-label">Lifespan</td>
+								<td>Lives with the repo</td>
+								<td class="highlight-col">Persistent, independent</td>
+							</tr>
+							<tr>
+								<td class="row-label">Example</td>
+								<td>"Run tests with npm test"</td>
+								<td class="highlight-col">"Always use lib/logger.ts for structured logging"</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- THE CLI -->
+		<section id="cli" class="section cli">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_04</span>
+					<h2>THE CLI</h2>
+				</div>
+				<p class="section-intro">The primary interface for agents and humans alike. Works with Claude Code, Cursor, Aider — any agent framework. No API integrations to maintain.</p>
+
+				<div class="cli-grid">
+					<div class="cli-card">
+						<div class="cli-card-header">Skill</div>
+						<div class="terminal terminal-small">
+							<div class="terminal-body">
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review --project voice-tools</div>
+							</div>
+						</div>
+						<p>Get a named skill — org, project, and user layers merged into one tailored output. No keywords required.</p>
 					</div>
-					<div class="why-item">
-						<span class="why-stat">↑</span>
-						<h4>BETTER OUTPUTS</h4>
-						<p>Fine tuning and context engineering produce far better results than better prompts.</p>
+
+					<div class="cli-card">
+						<div class="cli-card-header">Query Ad-Hoc</div>
+						<div class="terminal terminal-small">
+							<div class="terminal-body">
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe query</span> "logging patterns" \</div>
+								<div class="terminal-line output">    --project voice-tools</div>
+							</div>
+						</div>
+						<p>Ad-hoc query when no skill exists yet. Get org-wide conventions relevant to your task.</p>
 					</div>
-					<div class="why-item">
-						<span class="why-stat">🔒</span>
-						<h4>DATA STAYS LOCAL</h4>
-						<p>Run models on your own infrastructure. No data leaves your environment.</p>
+
+					<div class="cli-card">
+						<div class="cli-card-header">Write</div>
+						<div class="terminal terminal-small">
+							<div class="terminal-body">
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use lib/logger.ts" \</div>
+								<div class="terminal-line output">    --project voice-tools --tag logging</div>
+							</div>
+						</div>
+						<p>Write a discovered convention back to the wiki. Indexing happens automatically.</p>
 					</div>
-					<div class="why-item">
-						<span class="why-stat">⚡</span>
-						<h4>FASTER & CHEAPER</h4>
-						<p>Small fine-tuned models outperform large APIs at a fraction of the cost.</p>
+
+					<div class="cli-card">
+						<div class="cli-card-header">Skill Create</div>
+						<div class="terminal terminal-small">
+							<div class="terminal-body">
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill create</span> code-review \</div>
+								<div class="terminal-line output">    --description "Facts for reviewing PRs"</div>
+							</div>
+						</div>
+						<p>Create a named skill. The system populates and maintains it across all layers as the wiki grows.</p>
+					</div>
+				</div>
+
+				<div class="bootstrap">
+					<h3>Agent Bootstrap</h3>
+					<p>The only integration required — add this to your agent.md:</p>
+					<div class="terminal terminal-small">
+						<div class="terminal-header">
+							<span class="terminal-dots"></span>
+							<span class="terminal-title">agent.md</span>
+						</div>
+						<div class="terminal-body">
+							<div class="terminal-line md-heading">## Organizational Knowledge</div>
+							<div class="terminal-line"></div>
+							<div class="terminal-line md-text">This project uses vibedecoding for institutional knowledge.</div>
+							<div class="terminal-line md-text">- Before a code review, run `vibe skill code-review --project voice-tools`</div>
+							<div class="terminal-line md-text">- Before writing code on a new topic, run `vibe query &lt;topic&gt; --project voice-tools`</div>
+							<div class="terminal-line md-text">- When you discover a reusable pattern, run `vibe write --project voice-tools`</div>
+							<div class="terminal-line md-text">- Run `vibe --help` for full usage</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- SKILLS -->
+		<section id="skills" class="section profiles">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_05</span>
+					<h2>SKILLS</h2>
+				</div>
+				<p class="section-intro">Skills are the primary interface between the wiki and agents. A skill is a <strong>named, layered, living context bundle</strong> — everything an agent needs for a specific task, assembled from multiple scopes.</p>
+
+				<div class="profiles-demo">
+					<div class="terminal terminal-small">
+						<div class="terminal-header">
+							<span class="terminal-dots"></span>
+							<span class="terminal-title">~/voice-tools</span>
+						</div>
+						<div class="terminal-body">
+							<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review    <span class="comment"># everything relevant to reviewing code</span></div>
+							<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> onboarding     <span class="comment"># everything a new team member needs</span></div>
+							<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> architecture   <span class="comment"># system design decisions and constraints</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="profiles-grid">
+					<div class="profile-card">
+						<h3>Layered Scopes</h3>
+						<p>Skills are composed from three layers, merged in order. When an agent calls <code>vibe skill code-review --project voice-tools --user ian</code>, it gets all three layers merged into one coherent output.</p>
+						<div class="scope-layers">
+							<div class="scope-layer"><span class="scope-label">ORG</span> "always check for structured logging"</div>
+							<div class="scope-layer indent"><span class="scope-label">PROJECT</span> "voice-tools uses WebSocket streams — check cleanup"</div>
+							<div class="scope-layer indent-2"><span class="scope-label">USER</span> "I care especially about error boundaries"</div>
+						</div>
+						<p class="profile-highlight">Layers annotate rather than override. Both facts surface with context — the agent reasons about the tension.</p>
+					</div>
+
+					<div class="profile-types">
+						<div class="profile-type">
+							<div class="profile-type-label">DECLARED</div>
+							<h4>You Name the Intent</h4>
+							<p>Create a skill and the system populates and maintains it across all layers as the wiki grows. New facts are automatically routed to relevant skills.</p>
+						</div>
+						<div class="profile-type">
+							<div class="profile-type-label">DISCOVERED</div>
+							<h4>The System Surfaces Patterns</h4>
+							<p>Written 8 facts about auth across 3 projects? The system suggests an <code>auth</code> skill. Accept, reject, or rename — then it's maintained going forward.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- AGENTS -->
+		<section id="agents" class="section agents">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_06</span>
+					<h2>AGENTS</h2>
+				</div>
+				<p class="section-intro">Agents are the primary growth vector. They transform vibedecoding from a passive wiki into a <strong>living organizational nervous system</strong>.</p>
+
+				<div class="agent-model">
+					<div class="agent-model-side">
+						<div class="model-card you-own">
+							<h4>YOU OWN</h4>
+							<p>The prompts, configuration, and trigger rules. Define what agents do and when they run.</p>
+						</div>
+					</div>
+					<div class="agent-model-side">
+						<div class="model-card we-own">
+							<h4>WE PROVIDE</h4>
+							<p>Agent code, VM runtime, tool integrations, and execution guarantees. Reliable, isolated execution.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="event-flow">
+					<h3>Event Sources → Agents → Wiki</h3>
+					<div class="flow-grid">
+						<div class="flow-item">
+							<span class="flow-source">GitHub release</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Release Summarizer</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">org/releases/</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">Linear milestone</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Milestone Summarizer</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">projects/{'{'} name {'}'}/</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">PR merged</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Pattern Extractor</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">org/conventions/</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">Meeting transcript</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Meeting Summarizer</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">org/decisions/</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">Daily cron</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Curator</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">deduplicate, flag contradictions</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">On write / cron</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Skill Maintainer</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">org|project|user skills/</span>
+						</div>
+						<div class="flow-item">
+							<span class="flow-source">Weekly cron</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-agent">Skill Discoverer</span>
+							<span class="flow-arrow">→</span>
+							<span class="flow-dest">surfaces new skill suggestions</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="agent-types">
+					<h3>Two Types of Agent Runs</h3>
+					<div class="agent-types-grid">
+						<div class="agent-type-card">
+							<div class="agent-type-label">CURATION</div>
+							<p>Keeping the wiki itself clean. Detects duplicate facts, flags contradictions, proposes merges. Runs on a daily or weekly schedule.</p>
+						</div>
+						<div class="agent-type-card">
+							<div class="agent-type-label">SKILL MAINTENANCE</div>
+							<p>Keeping skills relevant and current across all layers. Routes new facts to the right skills. Discovers new skill candidates from emerging clusters.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="agent-config">
+					<h3>Customer-Authored Prompts</h3>
+					<p>You write the prompts. We run them in isolated Firecracker microVMs — ~125ms boot time, clean VM per run, no cross-customer contamination.</p>
+					<div class="terminal terminal-small">
+						<div class="terminal-header">
+							<span class="terminal-dots"></span>
+							<span class="terminal-title">.vibe/agents.yaml</span>
+						</div>
+						<div class="terminal-body">
+							<div class="terminal-line yaml-key">agents:</div>
+							<div class="terminal-line yaml-item">  - name: <span class="yaml-val">release-summarizer</span></div>
+							<div class="terminal-line yaml-item">    trigger: <span class="yaml-val">github.release</span></div>
+							<div class="terminal-line yaml-item">    prompt: <span class="yaml-val">|</span></div>
+							<div class="terminal-line yaml-str">      You are summarizing releases for a</div>
+							<div class="terminal-line yaml-str">      medical scheduling SaaS. Focus on API</div>
+							<div class="terminal-line yaml-str">      changes and breaking changes.</div>
+							<div class="terminal-line"></div>
+							<div class="terminal-line yaml-item">  - name: <span class="yaml-val">linear-milestone</span></div>
+							<div class="terminal-line yaml-item">    trigger: <span class="yaml-val">linear.milestone.completed</span></div>
+							<div class="terminal-line yaml-item">    prompt: <span class="yaml-val">|</span></div>
+							<div class="terminal-line yaml-str">      Summarize this milestone focusing on</div>
+							<div class="terminal-line yaml-str">      what we decided NOT to build and why.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- KEY DIFFERENTIATORS -->
+		<section class="section differentiators">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_07</span>
+					<h2>WHY VIBEDECODING</h2>
+				</div>
+				<div class="diff-grid">
+					<div class="diff-item">
+						<span class="diff-icon">⚡</span>
+						<h4>STANDALONE CLI</h4>
+						<p>Works with Claude Code, Cursor, Aider, any agent framework. No API integrations to maintain.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🎯</span>
+						<h4>SKILLS, NOT QUERIES</h4>
+						<p>Agents call <code>vibe skill code-review</code> and get everything they need. Gets smarter over time without any agent changes.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🧩</span>
+						<h4>LAYERED CONTEXT</h4>
+						<p>Org, project, and user layers merge into one tailored skill. The same skill name returns different context depending on where you are.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🔮</span>
+						<h4>SKILL DISCOVERY</h4>
+						<p>The system tells you what skills you should have, based on what you've already written.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🔒</span>
+						<h4>GIT-BACKED TRUST</h4>
+						<p>Agent-proposed changes go through PR review. Full provenance. Human-auditable at all times.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🛡</span>
+						<h4>FIRECRACKER ISOLATION</h4>
+						<p>Real VM-level isolation for agent execution. Genuinely safe to give write access to a wiki that matters.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🎛</span>
+						<h4>PROMPT-OWNED</h4>
+						<p>You control the voice and focus of agents. We guarantee reliable, isolated execution.</p>
+					</div>
+					<div class="diff-item">
+						<span class="diff-icon">🌐</span>
+						<h4>CROSS-PROJECT SCOPE</h4>
+						<p>The thing CLAUDE.md can't do. Org-wide knowledge that spans every repo.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PRICING -->
+		<section id="pricing" class="section pricing">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_08</span>
+					<h2>PRICING</h2>
+				</div>
+				<p class="section-intro">Gate by run volume, not by agent type or feature access. All tiers get the same agents. Flat team tiers — no per-seat friction.</p>
+
+				<div class="pricing-grid">
+					<div class="pricing-card">
+						<div class="pricing-tier">FREE</div>
+						<div class="pricing-price">$0</div>
+						<div class="pricing-period">forever</div>
+						<ul class="pricing-features">
+							<li>1 user</li>
+							<li>5 agent runs / month</li>
+							<li>CLI access</li>
+							<li>Git-backed wiki</li>
+						</ul>
+						<div class="pricing-tagline">Build the wiki habit with the CLI</div>
+						<button class="btn btn-pricing">$ GET_STARTED</button>
+					</div>
+
+					<div class="pricing-card">
+						<div class="pricing-tier">TEAM</div>
+						<div class="pricing-price">$39<span class="pricing-mo">/mo</span></div>
+						<div class="pricing-period">flat rate</div>
+						<ul class="pricing-features">
+							<li>Up to 15 users</li>
+							<li>300 agent runs / month</li>
+							<li>All agent types included</li>
+							<li>$0.15 / overage run</li>
+						</ul>
+						<div class="pricing-tagline">Agents writing to your wiki automatically</div>
+						<button class="btn btn-pricing">$ START_TEAM</button>
+					</div>
+
+					<div class="pricing-card featured">
+						<div class="pricing-badge">RECOMMENDED</div>
+						<div class="pricing-tier">BUSINESS</div>
+						<div class="pricing-price">$99<span class="pricing-mo">/mo</span></div>
+						<div class="pricing-period">flat rate</div>
+						<ul class="pricing-features">
+							<li>Up to 50 users</li>
+							<li>1,000 agent runs / month</li>
+							<li>All agent types included</li>
+							<li>$0.10 / overage run</li>
+						</ul>
+						<div class="pricing-tagline">Agents maintaining themselves</div>
+						<button class="btn btn-pricing btn-primary">$ START_BUSINESS</button>
+					</div>
+
+					<div class="pricing-card">
+						<div class="pricing-tier">ENTERPRISE</div>
+						<div class="pricing-price">Custom</div>
+						<div class="pricing-period">talk to us</div>
+						<ul class="pricing-features">
+							<li>Unlimited users</li>
+							<li>Custom run volume</li>
+							<li>All agent types included</li>
+							<li>SSO, audit logs</li>
+						</ul>
+						<div class="pricing-tagline">Your legal team calls our legal team</div>
+						<button class="btn btn-pricing">$ CONTACT_SALES</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ROADMAP -->
+		<section class="section roadmap">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">> SECTION_09</span>
+					<h2>THE PATH FORWARD</h2>
+				</div>
+
+				<div class="roadmap-flow">
+					<div class="roadmap-step active">
+						<div class="roadmap-phase">PHASE 1</div>
+						<h3>CLI + Skills</h3>
+						<ul>
+							<li>vibe init, write, skill, query, skill create</li>
+							<li>Git-backed wiki with layered structure</li>
+							<li>Context inference from .vibe/config.yaml</li>
+							<li>Declared skills (org layer)</li>
+							<li>Daily curation + skill maintenance</li>
+						</ul>
+					</div>
+
+					<div class="roadmap-connector"></div>
+
+					<div class="roadmap-step">
+						<div class="roadmap-phase">PHASE 2</div>
+						<h3>Webhooks + Full Layering</h3>
+						<ul>
+							<li>GitHub release webhook</li>
+							<li>Release summarizer agent</li>
+							<li>Project-layer skill support</li>
+							<li>Skill discovery agent</li>
+						</ul>
+					</div>
+
+					<div class="roadmap-connector"></div>
+
+					<div class="roadmap-step">
+						<div class="roadmap-phase">PHASE 3</div>
+						<h3>Portal + User Layer</h3>
+						<ul>
+							<li>Web UI for browsing/editing</li>
+							<li>User-layer skills (personal, no PR review)</li>
+							<li>Team management + billing</li>
+							<li>Skill suggestion UI</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
 		<section class="section cta">
 			<div class="container">
 				<div class="cta-box">
-					<div class="cta-header">> READY_TO_BUILD?</div>
-					<h2>START BUILDING</h2>
-					<p>Head to the fundamentals tutorial to begin. Or explore the repos to see how these pieces fit together.</p>
+					<div class="cta-header">> READY_TO_REMEMBER?</div>
+					<h2>STOP LOSING KNOWLEDGE</h2>
+					<p>Your agents are smart. Give them a memory. Start building your organizational wiki today.</p>
 					<div class="cta-buttons">
-						<a href="https://github.com/irbull/ai-the-hard-way" class="btn btn-primary">$ LLMS_THE_HARD_WAY</a>
-						<a href="https://github.com/irbull/crucible" class="btn btn-secondary">$ CRUCIBLE</a>
+						<button class="btn btn-primary">$ GET_STARTED_FREE</button>
+						<a href="#solution" class="btn btn-secondary">./READ_THE_DOCS</a>
 					</div>
 				</div>
 			</div>
@@ -218,8 +644,8 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container">
 			<pre class="ascii-art">
 ┌─────────────────────────────────────────────┐
-│  (c) 2026 VibeDecoding                     │
-│  Built by a pragmatist, for pragmatists    │
+│  (c) 2026 vibedecoding.io                  │
+│  Institutional memory for coding agents     │
 └─────────────────────────────────────────────┘
 			</pre>
 		</div>
@@ -239,8 +665,10 @@ import Layout from '../layouts/Layout.astro';
 		--color-accent: #f59e0b;
 		--color-border: #e5e5e5;
 		--color-terminal-bg: #1a1a1a;
+		--color-green: #22c55e;
 	}
 
+	/* ── HEADER ── */
 	.header {
 		position: fixed;
 		top: 0;
@@ -268,10 +696,7 @@ import Layout from '../layouts/Layout.astro';
 		text-decoration: none;
 	}
 
-	.prompt {
-		color: var(--color-primary);
-		margin-right: 0.5rem;
-	}
+	.prompt { color: var(--color-primary); margin-right: 0.5rem; }
 
 	.nav-links {
 		display: flex;
@@ -282,14 +707,31 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--color-text-muted);
 		text-decoration: none;
 		font-weight: 500;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		transition: color 0.2s;
 	}
 
-	.nav-links a:hover {
+	.nav-links a:hover { color: var(--color-primary); }
+
+	.btn-login {
+		background: transparent;
 		color: var(--color-primary);
+		border: 1px solid var(--color-primary);
+		padding: 0.4rem 1rem;
+		font-family: inherit;
+		font-size: 0.8rem;
+		font-weight: 600;
+		cursor: pointer;
+		border-radius: 2px;
+		transition: all 0.2s;
 	}
 
+	.btn-login:hover {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	/* ── HERO ── */
 	.hero {
 		padding: 8rem 2rem 4rem;
 		max-width: 1200px;
@@ -333,10 +775,7 @@ import Layout from '../layouts/Layout.astro';
 		margin-bottom: 2rem;
 	}
 
-	.hero-cta {
-		display: flex;
-		gap: 1rem;
-	}
+	.hero-cta { display: flex; gap: 1rem; }
 
 	.btn {
 		display: inline-block;
@@ -346,77 +785,56 @@ import Layout from '../layouts/Layout.astro';
 		text-decoration: none;
 		font-size: 0.9rem;
 		transition: all 0.2s;
+		cursor: pointer;
+		font-family: inherit;
+		border: none;
 	}
 
-	.btn-primary {
-		background: var(--color-primary);
-		color: white;
-	}
-
-	.btn-primary:hover {
-		background: var(--color-primary-hover);
-	}
+	.btn-primary { background: var(--color-primary); color: white; }
+	.btn-primary:hover { background: var(--color-primary-hover); }
 
 	.btn-secondary {
 		background: transparent;
 		color: var(--color-text);
 		border: 1px solid var(--color-border);
 	}
+	.btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); }
 
-	.btn-secondary:hover {
-		border-color: var(--color-primary);
-		color: var(--color-primary);
-	}
-
-	.hero-visual {
-		position: relative;
-	}
-
+	/* ── TERMINAL ── */
 	.terminal {
 		background: var(--color-terminal-bg);
-		border: 1px solid var(--color-border);
+		border: 1px solid #333;
 		border-radius: 6px;
 		overflow: hidden;
 		box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 	}
 
+	.terminal-small { box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+
 	.terminal-header {
-		background: var(--color-surface);
+		background: #2a2a2a;
 		padding: 0.5rem 1rem;
 		display: flex;
 		align-items: center;
 		gap: 1rem;
-		border-bottom: 1px solid var(--color-border);
+		border-bottom: 1px solid #333;
 	}
 
-	.terminal-dots {
-		display: flex;
-		gap: 0.25rem;
-		font-size: 0.5rem;
-	}
+	.terminal-dots::before { content: "● ● ●"; color: #555; font-size: 0.5rem; }
+	.terminal-title { font-size: 0.75rem; color: #666; }
 
-	.terminal-dots::before {
-		content: "● ● ●";
-		color: var(--color-text-muted);
-	}
+	.terminal-body { padding: 1rem; font-size: 0.8rem; }
 
-	.terminal-title {
-		font-size: 0.75rem;
-		color: var(--color-text-muted);
-	}
-
-	.terminal-body {
-		padding: 1rem;
-		font-size: 0.8rem;
-	}
-
-	.terminal-line {
-		margin: 0.25rem 0;
-		color: var(--color-text-muted);
-	}
+	.terminal-line { margin: 0.25rem 0; color: #999; }
+	.terminal-line .prompt { color: var(--color-green); }
+	.terminal-line .cmd { color: #fff; font-weight: 600; }
+	.terminal-line.output { color: #777; padding-left: 0; }
+	.terminal-line.tree { color: #888; }
+	.terminal-line.dim { color: #555; }
+	.tree-branch { color: #555; }
 
 	.terminal-cursor {
-		color: var(--color-primary);
+		color: var(--color-green);
 		animation: blink 1s step-end infinite;
 	}
 
@@ -425,201 +843,713 @@ import Layout from '../layouts/Layout.astro';
 		50% { opacity: 0; }
 	}
 
-	.section {
-		padding: 4rem 2rem;
-		border-top: 1px dashed var(--color-border);
+	/* ── SECTIONS ── */
+	.section { padding: 5rem 2rem; border-top: 1px dashed var(--color-border); }
+	.container { max-width: 1200px; margin: 0 auto; }
+
+	.section-header { text-align: center; margin-bottom: 2rem; }
+	.section-label { display: block; color: var(--color-secondary); font-size: 0.75rem; margin-bottom: 0.5rem; }
+	.section h2 { font-size: 2rem; text-align: center; margin: 0; color: var(--color-text); letter-spacing: 0.1em; }
+	.section-intro { text-align: center; font-size: 1rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem; line-height: 1.6; }
+
+	/* ── PROBLEM ── */
+	.problem { background: var(--color-surface); }
+
+	.problem-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
 	}
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.section-header {
+	.problem-card {
+		background: var(--color-bg);
+		padding: 2rem;
+		border-radius: 4px;
+		border: 1px solid var(--color-border);
 		text-align: center;
-		margin-bottom: 2rem;
 	}
 
-	.section-label {
-		display: block;
+	.problem-icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+
+	.problem-card h3 {
+		margin: 0 0 0.75rem;
+		font-size: 1rem;
+		color: var(--color-text);
+	}
+
+	.problem-card p {
+		margin: 0 0 1rem;
+		color: var(--color-text-muted);
+		font-size: 0.85rem;
+		line-height: 1.5;
+	}
+
+	.problem-verdict {
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: var(--color-accent);
+		letter-spacing: 0.05em;
+	}
+
+	/* ── SOLUTION ── */
+	.solution { background: var(--color-bg); }
+
+	.architecture {
+		display: flex;
+		align-items: stretch;
+		gap: 0;
+		margin-bottom: 3rem;
+	}
+
+	.layer {
+		flex: 1;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 2rem;
+	}
+
+	.layer-label {
+		font-size: 0.7rem;
+		font-weight: 700;
 		color: var(--color-secondary);
-		font-size: 0.75rem;
+		letter-spacing: 0.1em;
 		margin-bottom: 0.5rem;
 	}
 
-	.section h2 {
-		font-size: 2rem;
-		text-align: center;
-		margin: 0;
-		color: var(--color-text);
-		letter-spacing: 0.1em;
-	}
-
-	.section-intro {
-		text-align: center;
-		font-size: 1rem;
-		color: var(--color-text-muted);
-		max-width: 700px;
-		margin: 0 auto 3rem;
-	}
-
-	.pillars {
-		background: var(--color-surface);
-	}
-
-	.pillars-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-	}
-
-	.pillar-card {
-		background: var(--color-bg);
-		padding: 1.5rem;
-		border-radius: 4px;
-		border: 1px solid var(--color-border);
-	}
-
-	.pillar-header {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.pillar-number {
-		font-size: 0.75rem;
-		font-weight: 700;
-		color: var(--color-secondary);
-	}
-
-	.pillar-header h3 {
-		margin: 0;
+	.layer h3 {
+		margin: 0 0 1rem;
 		font-size: 1.1rem;
 		color: var(--color-text);
 	}
 
-	.pillar-card p {
-		margin: 0 0 1rem;
+	.layer ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.layer li {
+		padding: 0.4rem 0;
+		font-size: 0.85rem;
 		color: var(--color-text-muted);
-		line-height: 1.5;
-		font-size: 0.9rem;
+		border-bottom: 1px solid var(--color-border);
 	}
 
-	.pillar-tags {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
+	.layer li:last-child { border-bottom: none; }
 
-	.tag {
-		font-size: 0.65rem;
-		padding: 0.2rem 0.4rem;
-		background: var(--color-border);
-		border-radius: 2px;
-		color: var(--color-text-dim);
-	}
-
-	.pillar-links a {
-		font-size: 0.8rem;
+	.layer li::before {
+		content: "→ ";
 		color: var(--color-primary);
-		text-decoration: none;
-		font-weight: 500;
 	}
 
-	.path {
+	.layer-connector {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 1.5rem;
+		gap: 0.5rem;
+	}
+
+	.connector-line {
+		width: 1px;
+		height: 2rem;
+		background: var(--color-border);
+	}
+
+	.connector-label {
+		font-size: 0.65rem;
+		color: var(--color-text-muted);
+		white-space: nowrap;
+		transform: rotate(-90deg);
+		letter-spacing: 0.1em;
+	}
+
+	.git-backed {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.git-info h3 {
+		margin: 0 0 1rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+	}
+
+	.git-info p {
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* ── COMPARISON ── */
+	.comparison { background: var(--color-surface); }
+
+	.comparison-table-wrapper { overflow-x: auto; }
+
+	.comparison-table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.85rem;
+	}
+
+	.comparison-table th,
+	.comparison-table td {
+		padding: 0.75rem 1rem;
+		text-align: left;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.comparison-table th {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: var(--color-text-dim);
 		background: var(--color-bg);
 	}
 
-	.path-flow {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 1rem;
+	.comparison-table td { color: var(--color-text-muted); }
+
+	.comparison-table .row-label {
+		font-weight: 600;
+		color: var(--color-text);
+		font-size: 0.8rem;
 	}
 
-	.path-step {
-		flex: 1;
-		text-align: center;
-		padding: 1.5rem;
+	.comparison-table .highlight-col {
+		color: var(--color-primary);
+		font-weight: 500;
+	}
+
+	.comparison-table th.highlight-col {
+		color: var(--color-primary);
+	}
+
+	/* ── CLI ── */
+	.cli { background: var(--color-bg); }
+
+	.cli-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.cli-card {
 		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 1.5rem;
+	}
+
+	.cli-card-header {
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: var(--color-secondary);
+		letter-spacing: 0.1em;
+		margin-bottom: 1rem;
+	}
+
+	.cli-card p {
+		margin: 1rem 0 0;
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+	}
+
+	.bootstrap {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 2rem;
+	}
+
+	.bootstrap h3 {
+		margin: 0 0 0.75rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+	}
+
+	.bootstrap > p {
+		margin: 0 0 1.5rem;
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+	}
+
+	.md-heading { color: var(--color-primary) !important; font-weight: 600; }
+	.md-text { color: #aaa !important; }
+
+	/* ── AGENTS ── */
+	.agents { background: var(--color-surface); }
+
+	.agent-model {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.model-card {
+		padding: 2rem;
 		border-radius: 4px;
 		border: 1px solid var(--color-border);
 	}
 
-	.step-icon {
-		font-size: 1.5rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.path-step h3 {
+	.model-card h4 {
 		margin: 0 0 0.75rem;
-		font-size: 0.9rem;
-		color: var(--color-text);
-		letter-spacing: 0.05em;
+		font-size: 0.8rem;
+		letter-spacing: 0.1em;
 	}
 
-	.path-step p {
-		margin: 0 0 1rem;
+	.model-card p {
+		margin: 0;
+		font-size: 0.85rem;
 		color: var(--color-text-muted);
-		font-size: 0.8rem;
 		line-height: 1.5;
 	}
 
-	.step-resources {
-		font-size: 0.75rem;
-		color: var(--color-secondary);
+	.you-own {
+		background: var(--color-bg);
+	}
+
+	.you-own h4 { color: var(--color-primary); }
+
+	.we-own {
+		background: var(--color-bg);
+	}
+
+	.we-own h4 { color: var(--color-secondary); }
+
+	.event-flow {
+		margin-bottom: 3rem;
+	}
+
+	.event-flow h3 {
+		margin: 0 0 1.5rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+		text-align: center;
+	}
+
+	.flow-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.flow-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.75rem 1.5rem;
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		font-size: 0.8rem;
+	}
+
+	.flow-source {
+		color: var(--color-text);
+		font-weight: 600;
+		min-width: 150px;
+	}
+
+	.flow-arrow { color: var(--color-border); }
+
+	.flow-agent {
+		color: var(--color-primary);
+		font-weight: 500;
+		min-width: 180px;
+	}
+
+	.flow-dest { color: var(--color-text-muted); }
+
+	.agent-config h3 {
+		margin: 0 0 0.75rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+	}
+
+	.agent-config > p {
+		margin: 0 0 1.5rem;
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	.yaml-key { color: var(--color-primary) !important; }
+	.yaml-item { color: #999 !important; }
+	.yaml-val { color: var(--color-green); }
+	.yaml-str { color: #777 !important; padding-left: 0; }
+
+	/* ── PROFILES ── */
+	.profiles { background: var(--color-bg); }
+
+	.profiles-demo { margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 3rem; }
+
+	.profiles-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.profile-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 2rem;
+	}
+
+	.profile-card h3 {
+		margin: 0 0 1rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+	}
+
+	.profile-card p {
+		margin: 0 0 1rem;
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+	}
+
+	.profile-card p:last-child { margin-bottom: 0; }
+
+	.profile-highlight {
+		color: var(--color-primary) !important;
 		font-weight: 500;
 	}
 
-	.path-arrow {
-		font-size: 1.5rem;
-		color: var(--color-border);
-		padding-top: 3rem;
+	.profile-card code, .diff-item code {
+		background: var(--color-border);
+		padding: 0.1rem 0.3rem;
+		border-radius: 2px;
+		font-size: 0.8rem;
 	}
 
-	.why-it-matters {
+	.profile-types {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.profile-type {
 		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 1.5rem;
 	}
 
-	.why-grid {
+	.profile-type-label {
+		font-size: 0.65rem;
+		font-weight: 700;
+		color: var(--color-secondary);
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	.profile-type h4 {
+		margin: 0 0 0.5rem;
+		font-size: 0.95rem;
+		color: var(--color-text);
+	}
+
+	.profile-type p {
+		margin: 0;
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+	}
+
+	.profile-type code {
+		background: var(--color-border);
+		padding: 0.1rem 0.3rem;
+		border-radius: 2px;
+		font-size: 0.8rem;
+	}
+
+	.comment { color: #555 !important; }
+
+	.scope-layers { margin: 1rem 0; }
+
+	.scope-layer {
+		padding: 0.4rem 0.6rem;
+		font-size: 0.8rem;
+		color: var(--color-text-muted);
+		border-left: 2px solid var(--color-border);
+		margin-bottom: 0.25rem;
+	}
+
+	.scope-layer.indent { margin-left: 1.5rem; }
+	.scope-layer.indent-2 { margin-left: 3rem; }
+
+	.scope-label {
+		font-size: 0.6rem;
+		font-weight: 700;
+		color: var(--color-secondary);
+		letter-spacing: 0.1em;
+		margin-right: 0.5rem;
+	}
+
+	/* ── AGENT TYPES ── */
+	.agent-types { margin-bottom: 3rem; }
+
+	.agent-types h3 {
+		margin: 0 0 1.5rem;
+		font-size: 1.1rem;
+		color: var(--color-text);
+		text-align: center;
+	}
+
+	.agent-types-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.agent-type-card {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 1.5rem;
+	}
+
+	.agent-type-label {
+		font-size: 0.65rem;
+		font-weight: 700;
+		color: var(--color-secondary);
+		letter-spacing: 0.1em;
+		margin-bottom: 0.75rem;
+	}
+
+	.agent-type-card p {
+		margin: 0;
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+		line-height: 1.5;
+	}
+
+	/* ── DIFFERENTIATORS ── */
+	.differentiators { background: var(--color-bg); }
+
+	.diff-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1.5rem;
 	}
 
-	.why-item {
+	.diff-item {
 		text-align: center;
-		padding: 1.5rem;
+		padding: 1.5rem 1rem;
 		border: 1px solid var(--color-border);
 		border-radius: 4px;
-		background: var(--color-bg);
+		background: var(--color-surface);
 	}
 
-	.why-stat {
-		display: block;
-		font-size: 2rem;
-		font-weight: 700;
-		color: var(--color-primary);
-		margin-bottom: 0.75rem;
-	}
+	.diff-icon { display: block; font-size: 1.5rem; margin-bottom: 0.75rem; }
 
-	.why-item h4 {
+	.diff-item h4 {
 		margin: 0 0 0.5rem;
 		color: var(--color-text);
-		font-size: 0.85rem;
+		font-size: 0.75rem;
 		letter-spacing: 0.05em;
 	}
 
-	.why-item p {
+	.diff-item p {
 		margin: 0;
 		color: var(--color-text-muted);
-		font-size: 0.8rem;
+		font-size: 0.75rem;
+		line-height: 1.4;
 	}
 
-	.cta {
-		background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+	/* ── PRICING ── */
+	.pricing { background: var(--color-surface); }
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
 	}
+
+	.pricing-card {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 2rem 1.5rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	.pricing-card.featured {
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 1px var(--color-primary);
+	}
+
+	.pricing-badge {
+		position: absolute;
+		top: -0.75rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-primary);
+		color: white;
+		font-size: 0.6rem;
+		font-weight: 700;
+		padding: 0.2rem 0.75rem;
+		border-radius: 2px;
+		letter-spacing: 0.1em;
+	}
+
+	.pricing-tier {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		color: var(--color-secondary);
+		margin-bottom: 0.75rem;
+	}
+
+	.pricing-price {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--color-text);
+		line-height: 1;
+	}
+
+	.pricing-mo {
+		font-size: 1rem;
+		font-weight: 400;
+		color: var(--color-text-muted);
+	}
+
+	.pricing-period {
+		font-size: 0.75rem;
+		color: var(--color-text-muted);
+		margin-bottom: 1.5rem;
+	}
+
+	.pricing-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.5rem;
+		text-align: left;
+		flex: 1;
+	}
+
+	.pricing-features li {
+		padding: 0.4rem 0;
+		font-size: 0.8rem;
+		color: var(--color-text-muted);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.pricing-features li::before {
+		content: "→ ";
+		color: var(--color-primary);
+	}
+
+	.pricing-tagline {
+		font-size: 0.7rem;
+		color: var(--color-text-dim);
+		font-style: italic;
+		margin-bottom: 1.5rem;
+	}
+
+	.btn-pricing {
+		width: 100%;
+		background: transparent;
+		color: var(--color-text);
+		border: 1px solid var(--color-border);
+		padding: 0.6rem 1rem;
+		font-family: inherit;
+		font-size: 0.8rem;
+		font-weight: 600;
+		cursor: pointer;
+		border-radius: 2px;
+		transition: all 0.2s;
+	}
+
+	.btn-pricing:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+	.pricing-card.featured .btn-pricing {
+		background: var(--color-primary);
+		color: white;
+		border-color: var(--color-primary);
+	}
+
+	.pricing-card.featured .btn-pricing:hover {
+		background: var(--color-primary-hover);
+	}
+
+	/* ── ROADMAP ── */
+	.roadmap { background: var(--color-bg); }
+
+	.roadmap-flow {
+		display: flex;
+		align-items: stretch;
+		gap: 0;
+	}
+
+	.roadmap-step {
+		flex: 1;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		padding: 2rem;
+	}
+
+	.roadmap-step.active { border-color: var(--color-primary); }
+
+	.roadmap-phase {
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: var(--color-secondary);
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	.roadmap-step.active .roadmap-phase { color: var(--color-primary); }
+
+	.roadmap-step h3 {
+		margin: 0 0 1rem;
+		font-size: 1rem;
+		color: var(--color-text);
+	}
+
+	.roadmap-step ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.roadmap-step li {
+		padding: 0.3rem 0;
+		font-size: 0.8rem;
+		color: var(--color-text-muted);
+	}
+
+	.roadmap-step li::before {
+		content: "→ ";
+		color: var(--color-primary);
+	}
+
+	.roadmap-connector {
+		width: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-border);
+		font-size: 1.5rem;
+	}
+
+	.roadmap-connector::before { content: "→"; }
+
+	/* ── CTA ── */
+	.cta { background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); }
 
 	.cta-header {
 		text-align: center;
@@ -628,46 +1558,30 @@ import Layout from '../layouts/Layout.astro';
 		margin-bottom: 0.5rem;
 	}
 
-	.cta h2 {
-		color: var(--color-text);
-	}
+	.cta h2 { color: var(--color-text); }
 
-	.cta-box {
-		text-align: center;
-	}
+	.cta-box { text-align: center; }
 
 	.cta-box p {
 		color: var(--color-text-muted);
 		font-size: 1rem;
 		margin-bottom: 2rem;
+		line-height: 1.6;
 	}
 
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-	}
+	.cta-buttons { display: flex; gap: 1rem; justify-content: center; }
 
-	.cta .btn-primary {
-		background: var(--color-text);
-		color: var(--color-bg);
-	}
+	.cta .btn-primary { background: var(--color-text); color: var(--color-bg); }
+	.cta .btn-primary:hover { background: #333; }
+	.cta .btn-secondary { border: 1px solid var(--color-primary); color: var(--color-primary); }
 
-	.cta .btn-secondary {
-		border: 1px solid var(--color-primary);
-		color: var(--color-primary);
-	}
-
+	/* ── FOOTER ── */
 	.footer {
 		background: var(--color-bg);
 		color: var(--color-text-muted);
 		padding: 2rem;
 		text-align: center;
 		border-top: 1px dashed var(--color-border);
-	}
-
-	.footer p {
-		margin: 0;
 	}
 
 	.ascii-art {
@@ -677,14 +1591,27 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0;
 	}
 
+	/* ── RESPONSIVE ── */
+	@media (max-width: 1024px) {
+		.diff-grid { grid-template-columns: repeat(2, 1fr); }
+		.pricing-grid { grid-template-columns: repeat(2, 1fr); }
+		.flow-item { flex-wrap: wrap; }
+		.flow-source, .flow-agent { min-width: auto; }
+	}
+
 	@media (max-width: 900px) {
-		.path-flow {
-			flex-direction: column;
+		.roadmap-flow { flex-direction: column; }
+		.roadmap-connector { width: auto; height: 1.5rem; transform: rotate(90deg); }
+		.architecture { flex-direction: column; }
+		.layer-connector {
+			flex-direction: row;
+			padding: 1rem 0;
 		}
-		.path-arrow {
-			transform: rotate(90deg);
-			padding: 0;
-		}
+		.connector-label { transform: none; }
+		.connector-line { width: 2rem; height: 1px; }
+		.git-backed { grid-template-columns: 1fr; }
+		.profiles-grid { grid-template-columns: 1fr; }
+		.agent-types-grid { grid-template-columns: 1fr; }
 	}
 
 	@media (max-width: 768px) {
@@ -694,34 +1621,21 @@ import Layout from '../layouts/Layout.astro';
 			text-align: center;
 		}
 
-		.hero h1 {
-			font-size: 2rem;
-		}
+		.hero h1 { font-size: 2rem; }
+		.hero-cta { justify-content: center; flex-wrap: wrap; }
+		.hero-visual { display: none; }
 
-		.hero-cta {
-			justify-content: center;
-			flex-wrap: wrap;
-		}
+		.nav-links { display: none; }
 
-		.hero-visual {
-			display: none;
-		}
+		.problem-grid { grid-template-columns: 1fr; }
+		.cli-grid { grid-template-columns: 1fr; }
+		.agent-model { grid-template-columns: 1fr; }
+		.diff-grid { grid-template-columns: repeat(2, 1fr); }
+		.pricing-grid { grid-template-columns: 1fr; }
 
-		.pillars-grid {
-			grid-template-columns: 1fr;
-		}
+		.comparison-table { font-size: 0.75rem; }
+		.comparison-table th, .comparison-table td { padding: 0.5rem; }
 
-		.why-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.nav-links {
-			display: none;
-		}
-
-		.cta-buttons {
-			flex-direction: column;
-			align-items: center;
-		}
+		.cta-buttons { flex-direction: column; align-items: center; }
 	}
 </style>
