@@ -36,13 +36,12 @@ import Layout from '../layouts/Layout.astro';
 						<span class="terminal-title">~/my-project</span>
 					</div>
 					<div class="terminal-body">
-						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review --project voice-tools</div>
+						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review</div>
 						<div class="terminal-line output">  → Always use lib/logger.ts for structured logging</div>
 						<div class="terminal-line output">  → voice-tools uses WebSocket streams — check cleanup</div>
 						<div class="terminal-line output">  → Error responses must include request_id</div>
 						<div class="terminal-line"></div>
-						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use lib/logger.ts for all logging" \</div>
-						<div class="terminal-line output">    --project voice-tools --tag logging</div>
+						<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use lib/logger.ts for all logging" </div>
 						<div class="terminal-line output">  ✓ Written to org/conventions/logging.md</div>
 						<div class="terminal-line output">  ✓ Skill code-review updated automatically</div>
 						<div class="terminal-cursor">█</div>
@@ -218,7 +217,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="cli-card-header">Skill</div>
 						<div class="terminal terminal-small">
 							<div class="terminal-body">
-								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review --project voice-tools</div>
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill</span> code-review</div>
 							</div>
 						</div>
 						<p>Get a named skill — org, project, and user layers merged into one tailored output. No keywords required.</p>
@@ -228,8 +227,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="cli-card-header">Query Ad-Hoc</div>
 						<div class="terminal terminal-small">
 							<div class="terminal-body">
-								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe query</span> "logging patterns" \</div>
-								<div class="terminal-line output">    --project voice-tools</div>
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe query</span> "logging patterns" </div>
 							</div>
 						</div>
 						<p>Ad-hoc query when no skill exists yet. Get org-wide conventions relevant to your task.</p>
@@ -239,8 +237,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="cli-card-header">Write</div>
 						<div class="terminal terminal-small">
 							<div class="terminal-body">
-								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use lib/logger.ts" \</div>
-								<div class="terminal-line output">    --project voice-tools --tag logging</div>
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe write</span> "Use @lib/logger.ts for logging"</div>
 							</div>
 						</div>
 						<p>Write a discovered convention back to the wiki. Indexing happens automatically.</p>
@@ -250,8 +247,7 @@ import Layout from '../layouts/Layout.astro';
 						<div class="cli-card-header">Skill Create</div>
 						<div class="terminal terminal-small">
 							<div class="terminal-body">
-								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill create</span> code-review \</div>
-								<div class="terminal-line output">    --description "Facts for reviewing PRs"</div>
+								<div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">vibe skill create</span> code-review</div>
 							</div>
 						</div>
 						<p>Create a named skill. The system populates and maintains it across all layers as the wiki grows.</p>
@@ -270,9 +266,9 @@ import Layout from '../layouts/Layout.astro';
 							<div class="terminal-line md-heading">## Organizational Knowledge</div>
 							<div class="terminal-line"></div>
 							<div class="terminal-line md-text">This project uses vibedecoding for institutional knowledge.</div>
-							<div class="terminal-line md-text">- Before a code review, run `vibe skill code-review --project voice-tools`</div>
-							<div class="terminal-line md-text">- Before writing code on a new topic, run `vibe query &lt;topic&gt; --project voice-tools`</div>
-							<div class="terminal-line md-text">- When you discover a reusable pattern, run `vibe write --project voice-tools`</div>
+							<div class="terminal-line md-text">- Before a code review, run `vibe skill code-review`</div>
+							<div class="terminal-line md-text">- Before writing code on a new topic, run `vibe query &lt;topic&gt;`</div>
+							<div class="terminal-line md-text">- When you discover a reusable pattern, run `vibe write`</div>
 							<div class="terminal-line md-text">- Run `vibe --help` for full usage</div>
 						</div>
 					</div>
@@ -1126,9 +1122,10 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.flow-item {
-		display: flex;
+		display: grid;
+		grid-template-columns: 12rem auto 14rem auto 1fr;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.75rem;
 		padding: 0.75rem 1.5rem;
 		background: var(--color-bg);
 		border: 1px solid var(--color-border);
@@ -1139,15 +1136,13 @@ import Layout from '../layouts/Layout.astro';
 	.flow-source {
 		color: var(--color-text);
 		font-weight: 600;
-		min-width: 150px;
 	}
 
-	.flow-arrow { color: var(--color-border); }
+	.flow-arrow { color: var(--color-border); text-align: center; }
 
 	.flow-agent {
 		color: var(--color-primary);
 		font-weight: 500;
-		min-width: 180px;
 	}
 
 	.flow-dest { color: var(--color-text-muted); }
@@ -1556,8 +1551,7 @@ import Layout from '../layouts/Layout.astro';
 	@media (max-width: 1024px) {
 		.diff-grid { grid-template-columns: repeat(2, 1fr); }
 		.pricing-grid { grid-template-columns: repeat(2, 1fr); }
-		.flow-item { flex-wrap: wrap; }
-		.flow-source, .flow-agent { min-width: auto; }
+		.flow-item { grid-template-columns: 1fr; gap: 0.25rem; }
 		.agent-types-grid.three-col { grid-template-columns: 1fr; }
 	}
 
