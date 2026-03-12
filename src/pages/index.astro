@@ -62,19 +62,19 @@ import Layout from '../layouts/Layout.astro';
 
 				<div class="problem-grid">
 					<div class="problem-card">
-						<span class="problem-icon">📄</span>
+						<img class="problem-icon" src="/docs.png" alt="Documentation icon" />
 						<h3>AGENTS.md / agent.md</h3>
 						<p>Single-project scope. No cross-project knowledge. Manually maintained by humans.</p>
 						<span class="problem-verdict">LIMITED SCOPE</span>
 					</div>
 					<div class="problem-card">
-						<span class="problem-icon">📚</span>
+						<img class="problem-icon" src="/books.png" alt="Books icon" />
 						<h3>Confluence / Notion</h3>
 						<p>Built for humans, not queryable by agents. Knowledge exists but agents can't reach it.</p>
 						<span class="problem-verdict">WRONG AUDIENCE</span>
 					</div>
 					<div class="problem-card">
-						<span class="problem-icon">🔍</span>
+						<img class="problem-icon" src="/search.png" alt="Search icon" />
 						<h3>RAG Over Codebase</h3>
 						<p>Finds what <em>is</em> — not what <em>should be</em>. Can't capture conventions, decisions, or lessons learned.</p>
 						<span class="problem-verdict">WRONG DATA</span>
@@ -485,42 +485,42 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="diff-grid">
 					<div class="diff-item">
-						<span class="diff-icon">⚡</span>
+						<img class="diff-icon" src="/lightning.png" alt="Lightning icon" />
 						<h4>STANDALONE CLI</h4>
 						<p>Works with Claude Code, Cursor, Aider, any agent framework. No API integrations to maintain.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🎯</span>
+						<img class="diff-icon" src="/target.png" alt="Target icon" />
 						<h4>SKILLS, NOT QUERIES</h4>
 						<p>Agents call <code>vibe skill code-review</code> and get everything they need. Gets smarter over time without any agent changes.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🧩</span>
+						<img class="diff-icon" src="/layer.png" alt="Layers icon" />
 						<h4>LAYERED CONTEXT</h4>
 						<p>Org, project, and user layers merge into one tailored skill. The same skill name returns different context depending on where you are.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🔮</span>
+						<img class="diff-icon" src="/discovery.png" alt="Discovery icon" />
 						<h4>SKILL DISCOVERY</h4>
 						<p>The system tells you what skills you should have, based on what you've already written.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🔒</span>
+						<img class="diff-icon" src="/lock.png" alt="Lock icon" />
 						<h4>GIT-BACKED TRUST</h4>
 						<p>Agent-proposed changes go through PR review. Full provenance. Human-auditable at all times.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🛡</span>
+						<img class="diff-icon" src="/sheild.png" alt="Shield icon" />
 						<h4>FIRECRACKER ISOLATION</h4>
 						<p>Real VM-level isolation for agent execution. Genuinely safe to give write access to a wiki that matters.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🎛</span>
+						<img class="diff-icon" src="/prompt-owned.png" alt="Prompt owned icon" />
 						<h4>PROMPT-OWNED</h4>
 						<p>You control the voice and focus of agents. We guarantee reliable, isolated execution.</p>
 					</div>
 					<div class="diff-item">
-						<span class="diff-icon">🌐</span>
+						<img class="diff-icon" src="/globe.png" alt="Globe icon" />
 						<h4>CROSS-PROJECT SCOPE</h4>
 						<p>The thing AGENTS.md can't do. Org-wide knowledge that spans every repo.</p>
 					</div>
@@ -893,7 +893,7 @@ import Layout from '../layouts/Layout.astro';
 		text-align: center;
 	}
 
-	.problem-icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+	.problem-icon { width: 48px; height: 48px; display: block; margin: 0 auto 1rem; }
 
 	.problem-card h3 {
 		margin: 0 0 0.75rem;
@@ -1413,7 +1413,7 @@ import Layout from '../layouts/Layout.astro';
 		background: var(--color-surface);
 	}
 
-	.diff-icon { display: block; font-size: 1.5rem; margin-bottom: 0.75rem; }
+	.diff-icon { display: block; width: 36px; height: 36px; margin: 0 auto 0.75rem; }
 
 	.diff-item h4 {
 		margin: 0 0 0.5rem;
