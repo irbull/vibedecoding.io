@@ -11,7 +11,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="vibedecoding.io — A persistent organizational memory layer for coding agents. CLAUDE.md for your whole org, with a human-readable audit trail and agent tooling on top." />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 <title>{title}</title>
@@ -34,5 +34,6 @@ const { title } = Astro.props;
 		margin: 0;
 		padding: 0;
 		background: #fafafa;
+		overflow-x: hidden;
 	}
 </style>

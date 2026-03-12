@@ -797,7 +797,7 @@ import Layout from '../layouts/Layout.astro';
 	.terminal-dots::before { content: "● ● ●"; color: #555; font-size: 0.5rem; }
 	.terminal-title { font-size: 0.75rem; color: #666; }
 
-	.terminal-body { padding: 1rem; font-size: 0.8rem; }
+	.terminal-body { padding: 1rem; font-size: 0.8rem; overflow-x: auto; }
 
 	.terminal-line { margin: 0.25rem 0; color: #999; }
 	.terminal-line .prompt { color: var(--color-green); }
@@ -1100,6 +1100,7 @@ import Layout from '../layouts/Layout.astro';
 
 	.event-flow {
 		margin-bottom: 3rem;
+		overflow-x: auto;
 	}
 
 	.event-flow h3 {
@@ -1540,6 +1541,7 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.2;
 		color: var(--color-text-dim);
 		margin: 0;
+		overflow-x: auto;
 	}
 
 	/* ── RESPONSIVE ── */
@@ -1565,9 +1567,11 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	@media (max-width: 768px) {
+		html { font-size: 100%; }
+
 		.hero {
 			grid-template-columns: 1fr;
-			padding-top: 6rem;
+			padding: 6rem 1rem 3rem;
 			text-align: center;
 		}
 
@@ -1576,6 +1580,9 @@ import Layout from '../layouts/Layout.astro';
 		.hero-visual { display: none; }
 
 		.nav-links { display: none; }
+		.nav { padding: 1rem; }
+
+		.section { padding: 3rem 1rem; }
 
 		.problem-grid { grid-template-columns: 1fr; }
 		.cli-grid { grid-template-columns: 1fr; }
