@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
 				<h1>A <span class="gradient-text">Wiki</span> for Your Coding Agents</h1>
 				<p class="hero-subtitle">AGENTS.md for your whole org, with a human-readable audit trail and agent tooling on top. Stop losing institutional knowledge between sessions.</p>
 				<div class="hero-cta">
-					<a href="#pricing" class="btn btn-primary">$ GET_STARTED</a>
+					<button class="btn btn-primary" data-tier="early-access" onclick="openModal(this)">$ GET_EARLY_ACCESS</button>
 					<a href="#solution" class="btn btn-secondary">./LEARN_MORE</a>
 				</div>
 			</div>
@@ -545,7 +545,7 @@ import Layout from '../layouts/Layout.astro';
 							<li>Git-backed wiki</li>
 						</ul>
 						<div class="pricing-tagline">Build the wiki habit with the CLI</div>
-						<button class="btn btn-pricing">$ GET_STARTED</button>
+						<button class="btn btn-pricing" data-tier="free" onclick="openModal(this)">$ GET_STARTED</button>
 					</div>
 
 					<div class="pricing-card">
@@ -559,7 +559,7 @@ import Layout from '../layouts/Layout.astro';
 							<li>$0.15 / overage run</li>
 						</ul>
 						<div class="pricing-tagline">Agents writing to your wiki automatically</div>
-						<button class="btn btn-pricing">$ START_TEAM</button>
+						<button class="btn btn-pricing" data-tier="team" onclick="openModal(this)">$ START_TEAM</button>
 					</div>
 
 					<div class="pricing-card featured">
@@ -574,7 +574,7 @@ import Layout from '../layouts/Layout.astro';
 							<li>$0.15 / overage run</li>
 						</ul>
 						<div class="pricing-tagline">Agents maintaining themselves</div>
-						<button class="btn btn-pricing btn-primary">$ START_BUSINESS</button>
+						<button class="btn btn-pricing btn-primary" data-tier="business" onclick="openModal(this)">$ START_BUSINESS</button>
 					</div>
 
 					<div class="pricing-card">
@@ -588,7 +588,7 @@ import Layout from '../layouts/Layout.astro';
 							<li>SSO, audit logs</li>
 						</ul>
 						<div class="pricing-tagline">Your legal team calls our legal team</div>
-						<button class="btn btn-pricing">$ CONTACT_SALES</button>
+						<button class="btn btn-pricing" data-tier="enterprise" onclick="openModal(this)">$ CONTACT_SALES</button>
 					</div>
 				</div>
 			</div>
@@ -598,17 +598,90 @@ import Layout from '../layouts/Layout.astro';
 		<section class="section cta">
 			<div class="container">
 				<div class="cta-box">
-					<div class="cta-header">> READY_TO_REMEMBER?</div>
-					<h2>STOP LOSING KNOWLEDGE</h2>
-					<p>Your agents are smart. Give them a memory. Start building your organizational wiki today.</p>
-					<div class="cta-buttons">
-						<button class="btn btn-primary">$ GET_STARTED_FREE</button>
-						<a href="#solution" class="btn btn-secondary">./READ_THE_DOCS</a>
-					</div>
+					<div class="cta-header">> LAUNCHING_SOON</div>
+					<h2>GET EARLY ACCESS</h2>
+					<p>We're building vibedecoding in the open. Sign up to be among the first teams to try it — and help shape what we build next.</p>
+					<button class="btn btn-primary" data-tier="early-access" onclick="openModal(this)">$ REQUEST_ACCESS</button>
 				</div>
 			</div>
 		</section>
 	</main>
+
+	<!-- EARLY ACCESS MODAL -->
+	<div id="early-access-modal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+		<div class="modal">
+			<button class="modal-close" onclick="closeModal()">&times;</button>
+			<div class="modal-header">> REQUEST_EARLY_ACCESS</div>
+			<h3 class="modal-title">Get on the list</h3>
+			<p class="modal-subtitle">We'll reach out when your spot is ready. No spam.</p>
+			<form class="modal-form" action="https://formspree.io/f/mvzwqbpa" method="POST" onsubmit="handleSubmit(event)">
+				<input type="text" name="_gotcha" style="display:none">
+				<input type="hidden" name="tier" id="modal-tier" value="">
+				<div class="modal-field">
+					<span class="form-prompt">❯</span>
+					<input type="email" name="email" required placeholder="you@company.com" class="form-input" id="modal-email" />
+				</div>
+				<div id="modal-tier-display" class="modal-tier-badge"></div>
+				<button type="submit" class="btn btn-primary modal-submit">$ SUBMIT</button>
+			</form>
+			<div id="modal-success" class="modal-success" style="display:none">
+				<span class="success-check">&#10003;</span>
+				<p>You're on the list. We'll be in touch.</p>
+			</div>
+		</div>
+	</div>
+
+	<script is:inline>
+		const tierLabels = {
+			'free': 'FREE',
+			'team': 'TEAM — $39/mo',
+			'business': 'BUSINESS — $99/mo',
+			'enterprise': 'ENTERPRISE',
+			'early-access': 'EARLY ACCESS'
+		};
+
+		function openModal(el) {
+			const tier = el.dataset.tier;
+			document.getElementById('modal-tier').value = tier;
+			const display = document.getElementById('modal-tier-display');
+			display.textContent = '→ Interested in: ' + (tierLabels[tier] || tier);
+			document.getElementById('early-access-modal').classList.add('active');
+			document.getElementById('modal-email').focus();
+		}
+
+		function closeModal() {
+			document.getElementById('early-access-modal').classList.remove('active');
+			// Reset state after transition
+			setTimeout(() => {
+				document.getElementById('modal-success').style.display = 'none';
+				document.querySelector('.modal-form').style.display = '';
+			}, 200);
+		}
+
+		async function handleSubmit(e) {
+			e.preventDefault();
+			const form = e.target;
+			const btn = form.querySelector('.modal-submit');
+			btn.textContent = '$ SENDING...';
+			btn.disabled = true;
+			try {
+				await fetch(form.action, {
+					method: 'POST',
+					body: new FormData(form),
+					headers: { 'Accept': 'application/json' }
+				});
+				form.style.display = 'none';
+				document.getElementById('modal-success').style.display = '';
+			} catch {
+				btn.textContent = '$ SUBMIT';
+				btn.disabled = false;
+			}
+		}
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') closeModal();
+		});
+	</script>
 
 	<footer class="footer">
 		<div class="container">
@@ -1504,7 +1577,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 
-	/* ── CTA ── */
+	/* ── CTA / EARLY ACCESS ── */
 	.cta { background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); }
 
 	.cta-header {
@@ -1525,11 +1598,143 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.6;
 	}
 
-	.cta-buttons { display: flex; gap: 1rem; justify-content: center; }
+	.form-prompt {
+		color: var(--color-green);
+		font-size: 0.9rem;
+		flex-shrink: 0;
+	}
 
-	.cta .btn-primary { background: var(--color-text); color: var(--color-bg); }
-	.cta .btn-primary:hover { background: #333; }
-	.cta .btn-secondary { border: 1px solid var(--color-primary); color: var(--color-primary); }
+	.form-input {
+		flex: 1;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: #fff;
+		font-family: inherit;
+		font-size: 0.9rem;
+		padding: 0.5rem 0;
+	}
+
+	.form-input::placeholder {
+		color: #555;
+	}
+
+	/* ── MODAL ── */
+	.modal-overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(4px);
+		z-index: 200;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s;
+	}
+
+	.modal-overlay.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.modal {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		padding: 2.5rem;
+		max-width: 460px;
+		width: 90%;
+		position: relative;
+		transform: translateY(10px);
+		transition: transform 0.2s;
+	}
+
+	.modal-overlay.active .modal {
+		transform: translateY(0);
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		font-size: 1.5rem;
+		color: var(--color-text-muted);
+		cursor: pointer;
+		line-height: 1;
+		padding: 0.25rem;
+	}
+
+	.modal-close:hover { color: var(--color-text); }
+
+	.modal-header {
+		color: var(--color-secondary);
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+	}
+
+	.modal-title {
+		margin: 0 0 0.5rem;
+		font-size: 1.25rem;
+		color: var(--color-text);
+	}
+
+	.modal-subtitle {
+		margin: 0 0 1.5rem;
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+	}
+
+	.modal-field {
+		display: flex;
+		align-items: center;
+		background: var(--color-terminal-bg);
+		border: 1px solid #333;
+		border-radius: 4px;
+		padding: 0.4rem 0.75rem;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.modal-tier-badge {
+		font-size: 0.75rem;
+		color: var(--color-primary);
+		margin-bottom: 1.5rem;
+		font-weight: 500;
+	}
+
+	.modal-submit {
+		width: 100%;
+		padding: 0.7rem 1.5rem;
+		font-size: 0.85rem;
+	}
+
+	.modal-success {
+		text-align: center;
+		padding: 1rem 0;
+	}
+
+	.success-check {
+		display: inline-block;
+		width: 2.5rem;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		border-radius: 50%;
+		background: var(--color-green);
+		color: white;
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.modal-success p {
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+		margin: 0;
+	}
 
 	/* ── FOOTER ── */
 	.footer {
@@ -1595,6 +1800,6 @@ import Layout from '../layouts/Layout.astro';
 		.comparison-table { font-size: 0.75rem; }
 		.comparison-table th, .comparison-table td { padding: 0.5rem; }
 
-		.cta-buttons { flex-direction: column; align-items: center; }
+		.modal { padding: 2rem 1.5rem; }
 	}
 </style>
